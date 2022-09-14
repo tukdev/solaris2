@@ -369,12 +369,8 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
                                 <mpath href="#aboutPath"/>
                             </animateMotion>
                         </circle>
-                        <text fill="green">A
-                            <animateMotion begin="0s" dur="10s" repeatCount="indefinite">
-                                <mpath href="#aboutPath"/>
-                            </animateMotion>
-                        </text>
-                    </svg>         
+                    </svg>  
+                    <div id="aboutText">A</div>       
                 </div>
             </div>    
         </div>
