@@ -1,0 +1,62 @@
+
+.Contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 95vh;
+    animation: contactAnim 1s ease;
+}
+
+
+.contact-content-wrapper{
+    display: flex;
+    width: 100vw;
+}
+
+.contact-content-module{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f350f8;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+@keyframes contactAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .contact-content-module{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #f350f8;
+    }
+    .contact-content-module label{
+        display: flex;
+        all:unset;
+        color:#f350f8;
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+

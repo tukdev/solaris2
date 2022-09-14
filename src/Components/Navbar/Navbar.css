@@ -1,0 +1,54 @@
+.Navbar-container{
+    display: flex;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 0.2rem;
+}
+
+.navbar-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+}
+
+.navbar-link label{
+    all: unset;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+@media screen and (max-width: 400px) and (min-width: 1024px){
+    .navbar-link label{
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 400px) and (min-width: 320px){
+    .navbar-link label{
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 320px) and (min-width: 280px){
+    .navbar-link label{
+        all:unset;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 280px){
+    .navbar-link label{
+        all:unset;
+        font-size: 14px;
+    }
+}

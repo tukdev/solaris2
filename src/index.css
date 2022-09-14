@@ -1,0 +1,17 @@
+
+@font-face {
+  font-family: 'Solaris-Text-500-Trial';
+  src: url(./fonts/Solaris-Text-500-Trial.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: 'Solaris-Text-500-Trial';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Solaris-Text-500-Trial';
+}
+

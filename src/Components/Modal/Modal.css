@@ -1,0 +1,23 @@
+.Modal-container{
+    display: flex;
+    position: relative;
+}
+
+
+.modal-content{
+    display: flex;
+}
+.modal-content-close{
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+.modal-close-button{
+    font-size: 18px;
+}
+
+.modal-content-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
