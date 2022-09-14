@@ -364,7 +364,7 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
                              />*/}
                     <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
                         <path id="aboutPath" d="M900,300 C900,421.50264 765.68542,520 600,520 434.31458,520 300,421.50264 300,300 300,178.49736 434.31458,80 600,80 765.68542,80 900,178.49736 900,300 z"></path>
-                        <circle cx="0" cy="0" r="30" fill="none">
+                        <circle cx="0" cy="0" r="30" fill="lightblue">
                             <animateMotion begin="0s" dur="10s" repeatCount="indefinite">
                                 <mpath href="#aboutPath"/>
                             </animateMotion>
