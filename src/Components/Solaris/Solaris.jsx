@@ -340,7 +340,7 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
             <div className='solaris-circles-all'>
                 <div className='solaris-circles-all-container' onClick={()=>{setActivePage('');
                                                                              setModalState(false)}}>
-                    <ASPCsvg handleAboutMouseEnter={handleAboutMouseEnter}
+                    {/*<ASPCsvg handleAboutMouseEnter={handleAboutMouseEnter}
                              handleAboutMouseLeave={handleAboutMouseLeave}
                              handleServicesMouseEnter={handleServicesMouseEnter}
                              handleServicesMouseLeave={handleServicesMouseLeave}
@@ -361,7 +361,20 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
                              handleServicesMouseClick={handleServicesMouseClick}
                              handlePartnersMouseClick={handlePartnersMouseClick}
                              handleContactMouseClick={handleContactMouseClick}
-                             />
+                             />*/}
+                    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                        <path id="aboutPath" d="M900,300 C900,421.50264 765.68542,520 600,520 434.31458,520 300,421.50264 300,300 300,178.49736 434.31458,80 600,80 765.68542,80 900,178.49736 900,300 z"></path>
+                        <circle cx="0" cy="0" r="30" fill="none">
+                            <animateMotion begin="0s" dur="10s" repeatCount="indefinite">
+                                <mpath href="#aboutPath"/>
+                            </animateMotion>
+                        </circle>
+                        <text fill="green">A
+                            <animateMotion begin="0s" dur="10s" repeatCount="indefinite">
+                                <mpath href="#aboutPath"/>
+                            </animateMotion>
+                        </text>
+                    </svg>         
                 </div>
             </div>    
         </div>
