@@ -53,7 +53,6 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
     /*ABOUT ANIMATION HELPER FUNCTIONS*/
    
     function aboutAnimation(){
-        MotionPathPlugin.convertToPath('#aboutPath');
         aboutCircleTL.current.to('#aboutCircle', {
         duration: 10,
         motionPath: {
@@ -66,7 +65,6 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
         })
         .play(aboutStart);
 
-        MotionPathPlugin.convertToPath('#aboutPath');
         aboutTextTL.current.to('#aboutText', {
         duration: 10,
         motionPath: {
@@ -340,7 +338,7 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
             <div className='solaris-circles-all'>
                 <div className='solaris-circles-all-container' onClick={()=>{setActivePage('');
                                                                              setModalState(false)}}>
-                    {/*<ASPCsvg handleAboutMouseEnter={handleAboutMouseEnter}
+                    <ASPCsvg handleAboutMouseEnter={handleAboutMouseEnter}
                              handleAboutMouseLeave={handleAboutMouseLeave}
                              handleServicesMouseEnter={handleServicesMouseEnter}
                              handleServicesMouseLeave={handleServicesMouseLeave}
@@ -361,16 +359,13 @@ function Solaris({color,modalState, setModalState, activePage,setActivePage}) {
                              handleServicesMouseClick={handleServicesMouseClick}
                              handlePartnersMouseClick={handlePartnersMouseClick}
                              handleContactMouseClick={handleContactMouseClick}
-                             />*/}
+                             />
                     <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
                         <path id="aboutPath" d="M900,300 C900,421.50264 765.68542,520 600,520 434.31458,520 300,421.50264 300,300 300,178.49736 434.31458,80 600,80 765.68542,80 900,178.49736 900,300 z"></path>
-                        <circle cx="0" cy="0" r="30" fill="lightblue">
-                            <animateMotion begin="0s" dur="10s" repeatCount="indefinite">
-                                <mpath href="#aboutPath"/>
-                            </animateMotion>
-                        </circle>
-                    </svg>  
-                    <div id="aboutText">A</div>       
+                        <path id="servicesPath" d="M1100,300 C1100,410.45695 876.14237,500 600,500 323.85763,500 100,410.45695 100,300 100,189.54305 323.85763,100 600,100 876.14237,100 1100,189.54305 1100,300 z"></path>
+                        <path id="partnersPath" d="M1050,300 C1050,438.07119 848.52814,550 600,550 351.47186,550 150,438.07119 150,300 150,161.92881 351.47186,50 600,50 848.52814,50 1050,161.92881 1050,300 z"></path>
+                        <path id="contactPath" d="M960,300 C960,454.63973 798.82251,580 600,580 401.17749,580 240,454.63973 240,300 240,145.36027 401.17749,20 600,20 798.82251,20 960,145.36027 960,300 z"></path>
+                    </svg>      
                 </div>
             </div>    
         </div>

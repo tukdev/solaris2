@@ -98,17 +98,16 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-
-#aboutText{
+#aboutText{    
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    fill: #68ee95; 
+    color: #68ee95;
 }
 #aboutCircle{
-    fill: transparent;
+    width: 80px;
+    height: 80px;
 }
-
 
 #servicesPath{
     fill: none;
@@ -116,23 +115,21 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-
-
 #servicesCircle{
-    fill: transparent;
+    width: 80px;
+    height: 80px;
 }
 #servicesText{
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    fill: #f65139;
+    color: #f65139;
 }
 
 
-
-
 #partnersCircle{
-    fill:transparent;
+        width: 80px;
+    height: 80px;
 }
 #partnersPath {
     fill: none;
@@ -140,21 +137,18 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-
 #partnersText{
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    fill: #2338df;
+    color: #2338df;
 }
-
-
 
 #contactText{
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    fill: #f350f8;
+    color: #f350f8;
 }
 #contactPath {
     fill: none;
@@ -163,9 +157,9 @@
     stroke-dasharray: 8;
 }
 #contactCircle{
-    fill:transparent;
+    width: 80px;
+    height: 80px;
 }
-
 
 
 @media screen and (max-height: 720px){
