@@ -64,7 +64,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
    return (
         <div>
             <div className="solaris-circles-all-container-svg">
-                <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid none">                
+                <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">                
                     <ellipse id="aboutPath" cx="600" cy="300" rx="300" ry="220" />
                     <ellipse id="servicesPath" cx="600" cy="300" rx="500" ry="200"/>
                     <ellipse id="partnersPath" cx="600" cy="300" rx="450" ry="250" />
