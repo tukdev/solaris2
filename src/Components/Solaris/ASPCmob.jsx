@@ -48,7 +48,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
 
    return (
         <div>
-            <div class="solaris-circles-all-container-svg">                
+            <div className="solaris-circles-all-container-svg">                
                 <svg viewBox="0 0 1200 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <ellipse id="aboutPath" cx="600" cy="1200" rx="400" ry="220" />
                     <ellipse id="servicesPath" cx="600" cy="1200" rx="450" ry="900"/>
