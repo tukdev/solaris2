@@ -63,42 +63,52 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
 
    return (
         <div>
-            <div onMouseEnter={()=>handleAboutSlowDown()}
-                 onMouseLeave={()=>handleAboutSpeedUp()} id="aboutCircle"></div>            
-            <div 
-                  onClick={(e)=>handleAboutMouseClick(e)}
-                  onMouseEnter={()=>handleAboutMouseEnter()}
-                  onMouseLeave={()=>handleAboutMouseLeave()} 
-                  id="aboutText"
-                  ref={aboutRef}>
-                  {activePage === '1' ? 'About' : 'A\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0' }
+            <div class="solaris-circles-all-container-svg">
+                <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">                
+                    <ellipse id="aboutPath" cx="600" cy="300" rx="300" ry="220" />
+                    <ellipse id="servicesPath" cx="600" cy="300" rx="500" ry="200"/>
+                    <ellipse id="partnersPath" cx="600" cy="300" rx="450" ry="250" />
+                    <ellipse id="contactPath" cx="600" cy="300" rx="360" ry="280" />
+                </svg>
             </div>
-                  
-            <div onMouseEnter={()=>handleServicesSlowDown()}
-                 onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle"></div>        
-            <div  onClick={(e)=>handleServicesMouseClick(e)}
-                  onMouseEnter={()=>handleServicesMouseEnter()} 
-                  onMouseLeave={()=>handleServicesMouseLeave()} 
-                  id="servicesText"
-                  ref={servicesRef}>{activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
-            </div>
+            <div>
+                <div onMouseEnter={()=>handleAboutSlowDown()}
+                     onMouseLeave={()=>handleAboutSpeedUp()} id="aboutCircle"></div>            
+                <div 
+                      onClick={(e)=>handleAboutMouseClick(e)}
+                      onMouseEnter={()=>handleAboutMouseEnter()}
+                      onMouseLeave={()=>handleAboutMouseLeave()} 
+                      id="aboutText"
+                      ref={aboutRef}>
+                      {activePage === '1' ? 'About' : 'A\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0' }
+                </div>
+                      
+                <div onMouseEnter={()=>handleServicesSlowDown()}
+                     onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle"></div>        
+                <div  onClick={(e)=>handleServicesMouseClick(e)}
+                      onMouseEnter={()=>handleServicesMouseEnter()} 
+                      onMouseLeave={()=>handleServicesMouseLeave()} 
+                      id="servicesText"
+                      ref={servicesRef}>{activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                </div>
 
-            <div onMouseEnter={()=>handlePartnersSlowDown()}
-                 onMouseLeave={()=>handlePartnersSpeedUp()} id="partnersCircle"></div>
-            <div onClick={(e)=>handlePartnersMouseClick(e)}
-                  onMouseEnter={()=>handlePartnersMouseEnter()} 
-                  onMouseLeave={()=>handlePartnersMouseLeave()} 
-                  id="partnersText"
-                  ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
-            </div>
+                <div onMouseEnter={()=>handlePartnersSlowDown()}
+                     onMouseLeave={()=>handlePartnersSpeedUp()} id="partnersCircle"></div>
+                <div onClick={(e)=>handlePartnersMouseClick(e)}
+                      onMouseEnter={()=>handlePartnersMouseEnter()} 
+                      onMouseLeave={()=>handlePartnersMouseLeave()} 
+                      id="partnersText"
+                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                </div>
 
-            <div onMouseEnter={()=>handleContactSlowDown()}
-                 onMouseLeave={()=>handleContactSpeedUp()} id="contactCircle"></div>
-            <div onClick={(e)=>handleContactMouseClick(e)}
-                  onMouseEnter={()=>handleContactMouseEnter()} 
-                  onMouseLeave={()=>handleContactMouseLeave()} 
-                  id="contactText"
-                  ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</div>
+                <div onMouseEnter={()=>handleContactSlowDown()}
+                     onMouseLeave={()=>handleContactSpeedUp()} id="contactCircle"></div>
+                <div onClick={(e)=>handleContactMouseClick(e)}
+                      onMouseEnter={()=>handleContactMouseEnter()} 
+                      onMouseLeave={()=>handleContactMouseLeave()} 
+                      id="contactText"
+                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</div>
+            </div>
         </div>       
   )
 }

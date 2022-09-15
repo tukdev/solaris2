@@ -90,7 +90,12 @@
     height: auto;
     max-height: 95vh;
 }
-
+.solaris-circles-all-container-svg{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+}
 
 #aboutPath {
     fill: none;
@@ -103,10 +108,10 @@
     font-size: 20px;
     line-height: 24px;
     color: #68ee95;
+    width: 30px;
+    height: 30px;
 }
-#aboutCircle{
-    width: 80px;
-    height: 80px;
+#aboutCircle{width: 80px;height: 80px;
 }
 
 #servicesPath{
@@ -115,22 +120,18 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#servicesCircle{
-    width: 80px;
-    height: 80px;
-}
+#servicesCircle{width: 80px;height: 80px;}
 #servicesText{
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #f65139;
+    width: 30px;
+    height: 30px;
 }
 
 
-#partnersCircle{
-        width: 80px;
-    height: 80px;
-}
+#partnersCircle{width: 80px;height: 80px;}
 #partnersPath {
     fill: none;
     stroke: lightblue;
@@ -142,6 +143,8 @@
     font-size: 20px;
     line-height: 24px;
     color: #2338df;
+    width: 30px;
+    height: 30px;
 }
 
 #contactText{
@@ -149,6 +152,8 @@
     font-size: 20px;
     line-height: 24px;
     color: #f350f8;
+    width: 30px;
+    height: 30px;
 }
 #contactPath {
     fill: none;
@@ -156,10 +161,7 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#contactCircle{
-    width: 80px;
-    height: 80px;
-}
+#contactCircle{width: 80px;height: 80px;}
 
 
 @media screen and (max-height: 720px){
@@ -200,29 +202,7 @@
         width: 60vw;
         height: 60vh;
     }
-    #aboutText{
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 24px;
-        fill: #68ee95;
-    }
-    #servicesText{
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 24px;
-        fill: #f65139;
-    }
-    #partnersText{
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 24px;
-        fill: #2338df;
-    }
-    #contactText{
-        font-weight: 500;
-        font-size: 30px;
-        fill: #f350f8;
-    }
+
     .solaris-modal-close{
         position: absolute;
         top: 5%;
@@ -240,29 +220,7 @@
         width: 60vw;
         height: 60vh;
     }
-    #aboutText{
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 24px;
-        fill: #68ee95;
-    }
-    #servicesText{
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 24px;
-        fill: #f65139;
-    }
-    #partnersText{
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 24px;
-        fill: #2338df;
-    }
-    #contactText{
-        font-weight: 500;
-        font-size: 40px;
-        fill: #f350f8;
-    }
+    
     .solaris-modal-close{
         position: absolute;
         top: 5%;
@@ -282,29 +240,7 @@
         width: 75%;
         height: 75%;
     }
-    #aboutText{
-        font-size: 55px;
-        line-height: 24px;
-        fill: #68ee95;
-    }
-    #servicesText{
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 24px;
-        fill: #f65139;
-    }
-    #partnersText{
-        font-weight: 500;
-        font-size: 55px;
-        line-height: 24px;
-        fill: #2338df;
-    }
-    #contactText{
-        font-weight: 500;
-        font-size: 55px;
-        line-height: 24px;
-        fill: #f350f8;
-    }
+    
     .solaris-modal-close{
         position: absolute;
         top: 5%;
@@ -324,30 +260,7 @@
         width: 80vw;
         height: auto;
     }
-    #aboutText{
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 24px;
-        fill: #68ee95;
-    }
-    #servicesText{
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 24px;
-        fill: #f65139;
-    }
-    #partnersText{
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 24px;
-        fill: #2338df;
-    }
-    #contactText{
-        font-weight: 500;
-        font-size: 65px;
-        line-height: 24px;
-        fill: #f350f8;
-    }
+
     .solaris-modal-close{
         position: absolute;
         top: 5%;
@@ -367,30 +280,7 @@
         width: 70%;
         height: 70%;
     }
-    #aboutText{
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 24px;
-        fill: #68ee95;
-    }
-    #servicesText{
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 24px;
-        fill: #f65139;
-    }
-    #partnersText{
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 24px;
-        fill: #2338df;
-    }
-    #contactText{
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 24px;
-        fill: #f350f8;
-    }
+   
     .solaris-modal-close{
         position: absolute;
         top: 5%;

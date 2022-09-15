@@ -47,39 +47,47 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
 
 
    return (
-        <svg viewBox="0 0 1200 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                <ellipse id="aboutPath" cx="600" cy="1200" rx="400" ry="220" />
-                <circle  id="aboutCircle" cx="87.4" cy="228.9" r="30" fill="lighbtlue" />
-                <text onMouseEnter={()=>{handleAboutMouseEnter()}}
+        <div>
+            <div class="solaris-circles-all-container-svg">                
+                <svg viewBox="0 0 1200 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse id="aboutPath" cx="600" cy="1200" rx="400" ry="220" />
+                    <ellipse id="servicesPath" cx="600" cy="1200" rx="450" ry="900"/>
+                    <ellipse id="partnersPath" cx="600" cy="1200" rx="430" ry="750" />
+                    <ellipse id="contactPath" cx="600" cy="1200" rx="420" ry="550" />
+                </svg>
+            </div>
+            <div>
+                <div  id="aboutCircle"></div>
+                <div onMouseEnter={()=>{handleAboutMouseEnter()}}
                       onMouseLeave={()=>handleAboutMouseLeave()} 
                       id="aboutText"
-                      ref={aboutRef}>{activePage === '1' ? 'About' : 'A\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text> 
-
-                <ellipse id="servicesPath" cx="600" cy="1200" rx="450" ry="900"/>
-                <circle  id="servicesCircle" cx="87.4" cy="228.9" r="15" fill="lightblue"/>      
-                <text onMouseEnter={()=>handleServicesMouseEnter()} 
+                      ref={aboutRef}>
+                      {activePage === '1' ? 'About' : 'A\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                </div> 
+                <div  id="servicesCircle"></div>
+                <div onMouseEnter={()=>handleServicesMouseEnter()} 
                       onMouseLeave={()=>handleServicesMouseLeave()} 
                       id="servicesText"
-                      ref={servicesRef}>{activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
-
-
-                <ellipse id="partnersPath" cx="600" cy="1200" rx="430" ry="750" />
-                <circle id="partnersCircle" cx="87.4" cy="228.9" r="15" fill="lightblue"/>             
-                <text onMouseEnter={()=>handlePartnersMouseEnter()} 
+                      ref={servicesRef}>
+                      {activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                </div>
+                <div id="partnersCircle"></div>
+                <div onMouseEnter={()=>handlePartnersMouseEnter()} 
                       onMouseLeave={()=>handlePartnersMouseLeave()} 
                       id="partnersText"
-                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
-
-
-                <ellipse id="contactPath" cx="600" cy="1200" rx="420" ry="550" />
-                <circle id="contactCircle" cx="87.4" cy="228.9" r="15" fill="lightblue"/>        
-                <text onMouseEnter={()=>handleContactMouseEnter()} 
+                      ref={partnersRef}>
+                      {activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                </div>
+                <div id="contactCircle"></div>
+                <div onMouseEnter={()=>handleContactMouseEnter()} 
                       onMouseLeave={()=>handleContactMouseLeave()} 
                       id="contactText"
-                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text> 
+                      ref={contactRef}>
+                      {activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                </div>
+            </div> 
 
-        </svg>        
+        </div>        
        
   )
 }
