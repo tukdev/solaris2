@@ -7,6 +7,7 @@ import {useEffect, useRef, useState} from 'react';
 import Footer from './Components/Footer/Footer';
 
 import Solaris from './Components/Solaris/Solaris';
+import SolarisMobile from './Components/Solaris/SolarisMobile';
 
 import Navbar from './Components/Navbar/Navbar';
 
@@ -71,13 +72,12 @@ function App() {
 
     return (
         <div className={modalState ? "App-cursor" : "App"}>
-            <div className='app-main-section'>
-                <Solaris color={color} modalState={modalState} setModalState={setModalState} activePage={activePage}
-                         setActivePage={setActivePage}/>
-                {/*{window.innerWidth > 500 ?*/}
-                {/*  :*/}
-                {/*  <SolarisMobile color={color} modalState={modalState} setModalState={setModalState} activePage={activePage} setActivePage={setActivePage}/>*/}
-                {/*} */}
+            <div className='app-main-section'>                
+                {window.innerWidth > windowHeight ?
+                    <Solaris viewBox={viewBox} color={color} modalState={modalState} setModalState={setModalState} activePage={activePage} setActivePage={setActivePage}/>
+                    :
+                    <SolarisMobile viewBox={viewBox} color={color} modalState={modalState} setModalState={setModalState} activePage={activePage} setActivePage={setActivePage}/>
+                } 
             </div>
             <div ref={navRef} className='app-navbar'>
                 <Navbar color={color} modalState={modalState} activePage={activePage} setActivePage={setActivePage}

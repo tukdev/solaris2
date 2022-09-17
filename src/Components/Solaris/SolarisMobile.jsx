@@ -16,7 +16,7 @@ import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
 
 
-function SolarisMobile({color, modalState, setModalState, activePage, setActivePage}) {
+function SolarisMobile({viewBox, color, modalState, setModalState, activePage, setActivePage}) {
 
     const logoRef = useRef();
     useEffect(() => {
@@ -263,15 +263,18 @@ function SolarisMobile({color, modalState, setModalState, activePage, setActiveP
             <div className='solaris-circles'>
                 <div className='solaris-circles-all'>
                     <div className='solaris-circles-all-container'>
-                        <ASPCmob handleAboutMouseEnter={handleAboutMouseEnter}
-                                 handleAboutMouseLeave={handleAboutMouseLeave}
-                                 handleServicesMouseEnter={handleServicesMouseEnter}
-                                 handleServicesMouseLeave={handleServicesMouseLeave}
-                                 handlePartnersMouseEnter={handlePartnersMouseEnter}
-                                 handlePartnersMouseLeave={handlePartnersMouseLeave}
-                                 handleContactMouseEnter={handleContactMouseEnter}
-                                 handleContactMouseLeave={handleContactMouseLeave}
-                                 activePage={activePage}/>
+                        <ASPCmob 
+                            handleAboutMouseEnter={handleAboutMouseEnter}
+                            handleAboutMouseLeave={handleAboutMouseLeave}
+                            handleServicesMouseEnter={handleServicesMouseEnter}
+                            handleServicesMouseLeave={handleServicesMouseLeave}
+                            handlePartnersMouseEnter={handlePartnersMouseEnter}
+                            handlePartnersMouseLeave={handlePartnersMouseLeave}
+                            handleContactMouseEnter={handleContactMouseEnter}
+                            handleContactMouseLeave={handleContactMouseLeave}
+                            activePage={activePage}
+                            viewBox={viewBox}
+                        />
                     </div>
                 </div>
             </div>

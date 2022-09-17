@@ -16,7 +16,7 @@ import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
 
 
-function Solaris({color, modalState, setModalState, activePage, setActivePage}) {
+function Solaris({viewBox, color, modalState, setModalState, activePage, setActivePage}) {
 
     const logoRef = useRef();
 
@@ -371,6 +371,7 @@ function Solaris({color, modalState, setModalState, activePage, setActivePage}) 
                             handlePartnersMouseClick={handlePartnersMouseClick}
                             handleContactMouseClick={handleContactMouseClick}
                             activePage={activePage}
+                            viewBox={viewBox}
                         />
                     </div>
                 </div>

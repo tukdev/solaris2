@@ -22,7 +22,8 @@ function ASPCsvg({
                      handleAboutMouseClick,
                      handleServicesMouseClick,
                      handlePartnersMouseClick,
-                     handleContactMouseClick
+                     handleContactMouseClick,
+                     viewBox
                  }) {
 
 
@@ -66,67 +67,50 @@ function ASPCsvg({
 
     return (
         <>
-            <svg viewBox="0 0 1200 600" width='100%' height='100%' fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse id="aboutPath" cx="600" cy="300" rx="300" ry="220"/>
+            <svg width='100%' height='100%' viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='xMidYMid meet'>
+                <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/4}`} ry={`${viewBox.height/2.75}`}/>
 
                 <circle
                     onMouseEnter={() => handleAboutSlowDown(0.8)}
-                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9"
-                    r="100"/>
+                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9" r="100"/>
                 <circle
                     onMouseEnter={() => handleAboutSlowDown(0.5)}
-                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9"
-                    r="80"/>
+                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9" r="80"/>
                 <circle
                     onMouseEnter={() => handleAboutSlowDown(0.2)}
-                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9"
-                    r="40"/>
-                <ellipse id="servicesPath" cx="600" cy="300" rx="500" ry="200"/>
+                    onMouseLeave={() => handleAboutSpeedUp()} 
+                    className="aboutCircle" cx="87.4" cy="228.9" r="40"/>
+                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.4}`} ry={`${viewBox.height/3}`}/>
                 <circle
                     onMouseEnter={() => handleServicesSlowDown(0.8)}
-                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4"
-                    cy="228.9"
-                    r="100"/>
+                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4" cy="228.9" r="100"/>
                 <circle
                     onMouseEnter={() => handleServicesSlowDown(0.5)}
-                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4"
-                    cy="228.9"
-                    r="80"/>
+                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4" cy="228.9" r="80"/>
                 <circle
                     onMouseEnter={() => handleServicesSlowDown(0.2)}
-                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4" cy="228.9"
-                    r="40"/>
-                <ellipse id="partnersPath" cx="600" cy="300" rx="450" ry="250"/>
+                    onMouseLeave={() => handleServicesSpeedUp()} 
+                    className="servicesCircle" cx="87.4" cy="228.9" r="40"/>
+                <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.4}`}/>
                 <circle
                     onMouseEnter={() => handlePartnersSlowDown(0.8)}
-                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4"
-                    cy="228.9"
-                    r="100"/>
+                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9" r="100"/>
                 <circle
                     onMouseEnter={() => handlePartnersSlowDown(0.5)}
-                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4"
-                    cy="228.9"
-                    r="80"/>
+                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9" r="80"/>
                 <circle
                     onMouseEnter={() => handlePartnersSlowDown(0.2)}
-                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9"
-                    r="40"/>
-                <ellipse id="contactPath" cx="600" cy="300" rx="360" ry="280"/>
+                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9" r="40"/>
+                <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.33}`} ry={`${viewBox.height/2.14}`}/>
                 <circle
                     onMouseEnter={() => handleContactSlowDown(0.8)}
-                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4"
-                    cy="228.9"
-                    r="100"/>
+                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9" r="100"/>
                 <circle
                     onMouseEnter={() => handleContactSlowDown(0.5)}
-                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4"
-                    cy="228.9"
-                    r="80"/>
+                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9" r="80"/>
                 <circle
                     onMouseEnter={() => handleContactSlowDown(0.2)}
-                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9"
-                    r="40"/>
-
+                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9" r="40"/>
             </svg>
             <div className='absolute'>
                 <p className='p' id='contactText'

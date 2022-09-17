@@ -115,6 +115,7 @@
 #aboutText {
     font-weight: 500;
     color: #68ee95;
+    fill: #68ee95;
     position: relative;
     z-index: 1;
 }
@@ -141,6 +142,7 @@
 #servicesText {
     font-weight: 500;
     color: #f65139;
+    fill: #f65139;
 }
 
 
@@ -162,12 +164,14 @@
 #partnersText {
     font-weight: 500;
     color: #2338df;
+    fill: #2338df;
 }
 
 
 #contactText {
     font-weight: 500;
     color: #f350f8;
+    fill: #f350f8;
 }
 
 #contactPath {
