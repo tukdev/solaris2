@@ -19,13 +19,25 @@ function App() {
     const [activePage, setActivePage] = useState('');
     const [modalState, setModalState] = useState(false);
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth-1);
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight-1);
 
-    window.addEventListener('resize', handleNewWindowWidth);
+     const [viewBox,setViewBox] = useState({
+        x: 0,
+        y: 0,
+        width: windowWidth,
+        height: windowHeight
+    });
 
-    function handleNewWindowWidth() {
-        setWindowWidth(window.innerWidth);
-    }
+    useEffect(()=>{
+        function handleNewWindowSize(){
+          setWindowWidth(window.innerWidth-1);
+          setWindowHeight(window.innerHeight-1);
+          setViewBox(`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+          window.location.reload();
+        }
+        window.addEventListener('resize',handleNewWindowSize);
+    },[]);
 
     const [color, setColor] = useState('black');
     useEffect(() => {
