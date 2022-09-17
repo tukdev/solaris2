@@ -1,39 +1,43 @@
-.App{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  cursor: url('./fonts/cursor1.svg'),auto;
+.App {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    cursor: url('./fonts/cursor1.svg'), auto;
 }
-.App-cursor{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  cursor: url('./fonts/cursor2.svg'),auto;
+
+.App-cursor {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    cursor: url('./fonts/cursor2.svg'), auto;
+}
+
+.app-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
 }
 
 
+.app-main-section {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+}
 
-.app-navbar{
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  z-index: 9999;
-  opacity: 0;
-}
-.app-main-section{
-  display: flex;
-  position: relative;
-  height: 95vh;
-  width: 100vw;
-  z-index: 99;
-}
-.app-footer-section{
-  display: flex;
-  width: 300vw;
-  height: 5vh;
-  z-index: 999;
+.app-footer-section {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    height: 5vh;
+    z-index: 999;
 }
 
 

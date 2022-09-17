@@ -1,21 +1,22 @@
-.Partners-container{
+.Partners-container {
     width: 100vw;
     height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: partnersAnim 1s ease; 
+    animation: partnersAnim 1s ease;
 }
+
 @keyframes partnersAnim {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-.partners-container-wrapper{
+.partners-container-wrapper {
     width: 90%;
     height: 90%;
     display: grid;
@@ -25,7 +26,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.partners-module{
+.partners-module {
     width: 100%;
     height: 100%;
     display: flex;
@@ -34,49 +35,49 @@
 }
 
 
-#cod{
+#cod {
     width: 36%;
     height: 36%;
 }
 
-#conlabs{
+#conlabs {
     width: 50%;
     height: 50%;
 }
 
-#cryptoecon{
+#cryptoecon {
     width: 60%;
     height: 60%;
 }
 
-#filecoin{
+#filecoin {
     width: 60%;
     height: 60%;
 }
 
-#FVM{
+#FVM {
     width: 70%;
     height: 70%;
 }
 
-#lotus{
+#lotus {
     width: 65%;
     height: 65%;
 }
 
-#PLlabs{
+#PLlabs {
     width: 55%;
     height: 55%;
 }
 
-#Retmarkets{
+#Retmarkets {
     width: 60%;
     height: 60%;
 }
 
 
-@media screen and (max-width: 420px){
-    .partners-container-wrapper{
+@media screen and (max-width: 420px) {
+    .partners-container-wrapper {
         width: 90%;
         height: 90%;
         display: grid;
@@ -85,43 +86,45 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
-    #cod{
+
+    #cod {
         width: 50%;
         height: 50%;
     }
-    #conlabs{
+
+    #conlabs {
         width: 70%;
         height: 70%;
     }
-    
-    #cryptoecon{
+
+    #cryptoecon {
         width: 80%;
         height: 80%;
     }
-    
-    #filecoin{
+
+    #filecoin {
         width: 75%;
         height: 75%;
     }
-    
-    #FVM{
+
+    #FVM {
         width: 80%;
         height: 80%;
     }
-    
-    #lotus{
+
+    #lotus {
         width: 75%;
         height: 75%;
     }
-    
-    #PLlabs{
+
+    #PLlabs {
         width: 70%;
         height: 70%;
     }
-    
-    #Retmarkets{
+
+    #Retmarkets {
         width: 70%;
         height: 70%;
     }
-    
+
 }

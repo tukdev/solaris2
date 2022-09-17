@@ -8,28 +8,27 @@
 }
 
 
-.solaris-modal{
-  position: fixed;
-  top: 0;
-  left:0;
-  width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(8px);
+.solaris-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
 }
 
-.solaris-modal-inactive{
+.solaris-modal-inactive {
     display: flex;
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     animation: modalAnim 2s ease;
 }
 
 
-
-.solaris-logo{
+.solaris-logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,250 +39,145 @@
 }
 
 
-
-.solaris-logo label{
-    all:unset;
-    font-family: 'Poppins',sans-serif;
+.solaris-logo label {
+    all: unset;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 90px;
     letter-spacing: 15px;
 }
 
-.solaris-modal-close{
-    position: absolute;
-    top: 5%;
-    left: 90%;
-    z-index: 10;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
+@media screen and (min-width: 1024px) {
+    .solaris-modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 3vw;
+        padding-top: 3vw;
+        z-index: 10;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .solaris-modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 3vw;
+        padding-top: 3vw;
+        z-index: 10;
+        font-weight: 500;
+    }
 }
 
 
-.solaris-circles{
+.solaris-circles {
     display: flex;
     animation: nodefade 3s ease;
 }
 
 @keyframes nodefade {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
+
+
 /*******************/
-.solaris-circles-all{
+.solaris-circles-all {
     display: flex;
-    position: fixed;
-    left: 2.5vw;
-    top: 2.5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.solaris-circles-all-container{
+
+.solaris-circles-all-container {
     display: flex;
+    position: relative;
     width: 95vw;
     height: auto;
     max-height: 95vh;
 }
-.solaris-circles-all-container-svg{
-    width: 95vw;
-    height: 95vh;
-    display: flex;
-}
-.solaris-circles-all-container-svg svg{
-    width: 100%;
-    height: 100%;
-}
+
+
 #aboutPath {
-    fill: none;
-    stroke: lightblue;
+    fill: transparent;
+    stroke: transparent;
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#aboutText{    
+
+#aboutText {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
     color: #68ee95;
-    width: 30px;
-    height: 30px;
-}
-#aboutCircle{width: 80px;height: 80px;
+    position: relative;
+    z-index: 1;
 }
 
-#servicesPath{
+.aboutCircle {
+    fill: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+
+#servicesPath {
     fill: none;
-    stroke: lightblue;
+    stroke: transparent;
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#servicesCircle{width: 80px;height: 80px;}
-#servicesText{
+
+
+.servicesCircle {
+    fill: transparent;
+}
+
+#servicesText {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
     color: #f65139;
-    width: 30px;
-    height: 30px;
 }
 
 
-#partnersCircle{width: 80px;height: 80px;}
+.partnersCircle {
+    fill: transparent;
+}
+
+.absolute {
+    position: absolute;
+}
+
 #partnersPath {
     fill: none;
-    stroke: lightblue;
+    stroke: transparent;
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#partnersText{
+
+#partnersText {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
     color: #2338df;
-    width: 30px;
-    height: 30px;
 }
 
-#contactText{
+
+#contactText {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
     color: #f350f8;
-    width: 30px;
-    height: 30px;
 }
+
 #contactPath {
     fill: none;
-    stroke: lightblue;
+    stroke: transparent;
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#contactCircle{width: 80px;height: 80px;}
 
-
-@media screen and (max-height: 720px){
-    .solaris-logo{
-        width: 50%;
-        height: 50%;
-    }
+.contactCircle {
+    fill: transparent;
 }
 
-@media screen and (max-height: 600px){
-    .solaris-logo{
-        width: 40vw;
-        height: 40vh;
-    }
-}
-
-
-@media screen and (max-height: 400px){
-    .solaris-logo{
-        width: 35vw;
-        height: 35vw;
-    }
-}
-@media screen and (max-height: 400px){
-    .solaris-logo{
-        width: 30vw;
-        height: 30vw;
-    }
-}
-
-
-
-@media screen and (max-width: 1024px){
-    .solaris-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60vw;
-        height: 60vh;
-    }
-
-    .solaris-modal-close{
-        position: absolute;
-        top: 5%;
-        left: 90%;
-        z-index: 10;
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 820px){
-    .solaris-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60vw;
-        height: 60vh;
-    }
-    
-    .solaris-modal-close{
-        position: absolute;
-        top: 5%;
-        left: 85%;
-        z-index: 10;
-        font-size: 16px;
-    }
-}
-
-
-
-@media screen and (max-width: 400px){
-    .solaris-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 75%;
-        height: 75%;
-    }
-    
-    .solaris-modal-close{
-        position: absolute;
-        top: 5%;
-        left: 80%;
-        z-index: 10;
-        font-size: 18px;
-    }
-}
-
-
-
-@media screen and (max-width: 320px){
-    .solaris-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80vw;
-        height: auto;
-    }
-
-    .solaris-modal-close{
-        position: absolute;
-        top: 5%;
-        left: 85%;
-        z-index: 10;
-        font-size: 12px;
-    }
-}
-
-
-
-@media screen and (max-width: 280px){
-    .solaris-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 70%;
-    }
-   
-    .solaris-modal-close{
-        position: absolute;
-        top: 5%;
-        left: 80%;
-        z-index: 10;
-        font-size: 12px;
-    }
-}

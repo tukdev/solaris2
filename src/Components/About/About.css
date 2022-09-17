@@ -1,5 +1,5 @@
 
-.About-container{
+.About-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,53 +7,26 @@
     height: 95vh;
     animation: aboutAnim 1s ease;
 }
+
 @keyframes aboutAnim {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
 
-.about-content{
+.about-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 94vw;
 }
-.about-content label{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
+
+.about-content label {
     color: #68ee95;
 }
 
-
-@media screen and (max-width: 1024px){
-    .about-content label{
-        font-size: 20px;
-        font-weight: 500;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .about-content label{
-        font-size: 18px;
-        font-weight: 500;
-    }
-}
-@media only screen and (max-width: 320px){
-    .about-content label{
-        font-size: 18px;
-        font-weight: 500;
-    }
-}
-@media only screen and (max-width: 280px){
-    .about-content label{
-        font-size: 12px;
-        font-weight: 500;
-    }
-}
 
