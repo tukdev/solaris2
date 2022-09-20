@@ -22,8 +22,7 @@ function ASPCsvg({
                      handleAboutMouseClick,
                      handleServicesMouseClick,
                      handlePartnersMouseClick,
-                     handleContactMouseClick,
-                     viewBox
+                     handleContactMouseClick
                  }) {
 
 
@@ -67,80 +66,47 @@ function ASPCsvg({
 
     return (
         <>
-            <svg width='100%' height='100%' viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='xMidYMid meet'>
-                <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/4}`} ry={`${viewBox.height/2.75}`}/>
+            <svg viewBox="0 0 1200 600" width='100%' height='100%' fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse id="aboutPath" cx="600" cy="300" rx="300" ry="220" />
+                <circle 
+                        onMouseEnter={()=>handleAboutSlowDown()}
+                        onMouseLeave={()=>handleAboutSpeedUp()} id="aboutCircle" cx="87.4" cy="228.9" r="40"/>
+                <text 
+                      onClick={(e)=>handleAboutMouseClick(e)}
+                      onMouseEnter={()=>handleAboutMouseEnter()}
+                      onMouseLeave={()=>handleAboutMouseLeave()} 
+                      id="aboutText"
+                      ref={aboutRef}>{activePage === '1' ? 'About' : 'A' }
+                      </text> 
 
-                <circle
-                    onMouseEnter={() => handleAboutSlowDown(0.8)}
-                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9" r="100"/>
-                <circle
-                    onMouseEnter={() => handleAboutSlowDown(0.5)}
-                    onMouseLeave={() => handleAboutSpeedUp()} className="aboutCircle" cx="87.4" cy="228.9" r="80"/>
-                <circle
-                    onMouseEnter={() => handleAboutSlowDown(0.2)}
-                    onMouseLeave={() => handleAboutSpeedUp()} 
-                    className="aboutCircle" cx="87.4" cy="228.9" r="40"/>
-                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.4}`} ry={`${viewBox.height/3}`}/>
-                <circle
-                    onMouseEnter={() => handleServicesSlowDown(0.8)}
-                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4" cy="228.9" r="100"/>
-                <circle
-                    onMouseEnter={() => handleServicesSlowDown(0.5)}
-                    onMouseLeave={() => handleServicesSpeedUp()} className="servicesCircle" cx="87.4" cy="228.9" r="80"/>
-                <circle
-                    onMouseEnter={() => handleServicesSlowDown(0.2)}
-                    onMouseLeave={() => handleServicesSpeedUp()} 
-                    className="servicesCircle" cx="87.4" cy="228.9" r="40"/>
-                <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.4}`}/>
-                <circle
-                    onMouseEnter={() => handlePartnersSlowDown(0.8)}
-                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9" r="100"/>
-                <circle
-                    onMouseEnter={() => handlePartnersSlowDown(0.5)}
-                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9" r="80"/>
-                <circle
-                    onMouseEnter={() => handlePartnersSlowDown(0.2)}
-                    onMouseLeave={() => handlePartnersSpeedUp()} className="partnersCircle" cx="87.4" cy="228.9" r="40"/>
-                <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.33}`} ry={`${viewBox.height/2.14}`}/>
-                <circle
-                    onMouseEnter={() => handleContactSlowDown(0.8)}
-                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9" r="100"/>
-                <circle
-                    onMouseEnter={() => handleContactSlowDown(0.5)}
-                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9" r="80"/>
-                <circle
-                    onMouseEnter={() => handleContactSlowDown(0.2)}
-                    onMouseLeave={() => handleContactSpeedUp()} className="contactCircle" cx="87.4" cy="228.9" r="40"/>
-            </svg>
-            <div className='absolute'>
-                <p className='p' id='contactText'
-                   onClick={(e) => handleContactMouseClick(e)}
-                   onMouseEnter={() => handleContactMouseEnter()}
-                   onMouseLeave={() => handleContactMouseLeave()}
-                   ref={contactRef}>
-                    {activePage === '4' ? 'Contact' : 'C'}
-                </p>
-                <p className='p' id='partnersText'
-                   onClick={(e) => handlePartnersMouseClick(e)}
-                   onMouseEnter={() => handlePartnersMouseEnter()}
-                   onMouseLeave={() => handlePartnersMouseLeave()}
-                   ref={partnersRef}>
-                    {activePage === '3' ? 'Partners' : 'P'}
-                </p>
-                <p className='p' id='servicesText'
-                   onClick={(e) => handleServicesMouseClick(e)}
-                   onMouseEnter={() => handleServicesMouseEnter()}
-                   onMouseLeave={() => handleServicesMouseLeave()}
-                   ref={servicesRef}>
-                    {activePage === '2' ? 'Services' : 'S'}</p>
-                <p className='p' id='aboutText'
-                   onClick={(e) => handleAboutMouseClick(e)}
-                   onMouseEnter={() => handleAboutMouseEnter()}
-                   onMouseLeave={() => handleAboutMouseLeave()}
-                   ref={aboutRef}>
-                    {activePage === '1' ? 'About' : 'A'}
-                </p>
-            </div>
+                <ellipse id="servicesPath" cx="600" cy="300" rx="500" ry="200"/>
+                <circle  onMouseEnter={()=>handleServicesSlowDown()}
+                        onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle" cx="81.4" cy="228.9" r="50"/>                
+                <text onClick={(e)=>handleServicesMouseClick(e)}
+                      onMouseEnter={()=>handleServicesMouseEnter()} 
+                      onMouseLeave={()=>handleServicesMouseLeave()} 
+                      id="servicesText"
+                      ref={servicesRef}>{activePage === '2' ? 'Services' : 'S'}
+                      </text>
+
+                <ellipse id="partnersPath" cx="600" cy="300" rx="450" ry="250" />
+                <circle onMouseEnter={()=>handlePartnersSlowDown()}
+                        onMouseLeave={()=>handlePartnersSpeedUp()} id="partnersCircle" cx="87.4" cy="228.9" r="40"/>             
+                <text onClick={(e)=>handlePartnersMouseClick(e)}
+                      onMouseEnter={()=>handlePartnersMouseEnter()} 
+                      onMouseLeave={()=>handlePartnersMouseLeave()} 
+                      id="partnersText"
+                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P'}</text>
+
+                <ellipse id="contactPath" cx="600" cy="300" rx="360" ry="280" />
+                <circle onMouseEnter={()=>handleContactSlowDown()}
+                        onMouseLeave={()=>handleContactSpeedUp()} id="contactCircle" cx="87.4" cy="228.9" r="40"/>        
+                <text onClick={(e)=>handleContactMouseClick(e)}
+                      onMouseEnter={()=>handleContactMouseEnter()} 
+                      onMouseLeave={()=>handleContactMouseLeave()} 
+                      id="contactText"
+                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text> 
+            </svg>            
         </>
     )
 }

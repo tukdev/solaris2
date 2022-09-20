@@ -10,8 +10,7 @@ function ASPCmob({
                      handlePartnersMouseLeave,
                      handleContactMouseEnter,
                      handleContactMouseLeave,
-                     activePage,
-                     viewBox
+                     activePage
                  }) {
 
 
@@ -55,33 +54,40 @@ function ASPCmob({
 
 
     return (
-        <svg width='100%' height='100%' viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} fill="none"  xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 1200 2400" fill="none" width='100%' height='100%' xmlns="http://www.w3.org/2000/svg">
 
-            <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3}`} ry={`${viewBox.height/10.9}`}/>
+            <ellipse id="aboutPath" cx="600" cy="1200" rx="400" ry="220"/>
             <circle id="aboutCircle" cx="87.4" cy="228.9" r="30" fill="lighbtlue"/>
-            <text onMouseEnter={() => handleAboutMouseEnter()}
+            <text onMouseEnter={() => {
+                handleAboutMouseEnter()
+            }}
                   onMouseLeave={() => handleAboutMouseLeave()}
                   id="aboutText"
                   ref={aboutRef}>{activePage === '1' ? 'About' : 'A'}</text>
 
-            <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.66}`}/>
+            <ellipse id="servicesPath" cx="600" cy="1200" rx="450" ry="900"/>
             <circle id="servicesCircle" cx="87.4" cy="228.9" r="15" />
             <text onMouseEnter={() => handleServicesMouseEnter()}
                   onMouseLeave={() => handleServicesMouseLeave()}
                   id="servicesText"
                   ref={servicesRef}>{activePage === '2' ? 'Services' : 'S'}</text>
-            <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.79}`} ry={`${viewBox.height/3.2}`}/>
+
+
+            <ellipse id="partnersPath" cx="600" cy="1200" rx="430" ry="750"/>
             <circle id="partnersCircle" cx="87.4" cy="228.9" r="15" />
             <text onMouseEnter={() => handlePartnersMouseEnter()}
                   onMouseLeave={() => handlePartnersMouseLeave()}
                   id="partnersText"
                   ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P'}</text>
-            <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.85}`} ry={`${viewBox.height/4.36}`}/>
+
+
+            <ellipse id="contactPath" cx="600" cy="1200" rx="420" ry="550"/>
             <circle id="contactCircle" cx="87.4" cy="228.9" r="15" />
             <text onMouseEnter={() => handleContactMouseEnter()}
                   onMouseLeave={() => handleContactMouseLeave()}
                   id="contactText"
                   ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text>
+
         </svg>
 
     )

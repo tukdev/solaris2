@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useLayoutEffect, useState, useRef, useEffect} from 'react';
 import './Solaris.css';
 
 
@@ -16,7 +16,7 @@ import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
 
 
-function SolarisMobile({viewBox, color, modalState, setModalState, activePage, setActivePage}) {
+function SolarisMobile({color, modalState, setModalState, activePage, setActivePage}) {
 
     const logoRef = useRef();
     useEffect(() => {
@@ -40,7 +40,24 @@ function SolarisMobile({viewBox, color, modalState, setModalState, activePage, s
     const contactCircleTL = useRef(gsap.timeline());
     const contactTextTL = useRef(gsap.timeline());
 
-
+    useLayoutEffect(() => {
+        function updateSize() {
+            aboutCircleTL.current.kill();
+            aboutTextTL.current.kill();
+            servicesCircleTL.current.kill();
+            servicesTextTL.current.kill();
+            partnersCircleTL.current.kill();
+            partnersTextTL.current.kill();
+            contactCircleTL.current.kill();
+            contactTextTL.current.kill();
+            aboutAnimation();
+            servicesAnimation();
+            partnersAnimation();
+            contactAnimation(); 
+        }
+        window.addEventListener('resize', updateSize);
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
     /*ABOUT ANIMATION HELPER FUNCTIONS*/
 
     function aboutAnimation() {
@@ -263,18 +280,15 @@ function SolarisMobile({viewBox, color, modalState, setModalState, activePage, s
             <div className='solaris-circles'>
                 <div className='solaris-circles-all'>
                     <div className='solaris-circles-all-container'>
-                        <ASPCmob 
-                            handleAboutMouseEnter={handleAboutMouseEnter}
-                            handleAboutMouseLeave={handleAboutMouseLeave}
-                            handleServicesMouseEnter={handleServicesMouseEnter}
-                            handleServicesMouseLeave={handleServicesMouseLeave}
-                            handlePartnersMouseEnter={handlePartnersMouseEnter}
-                            handlePartnersMouseLeave={handlePartnersMouseLeave}
-                            handleContactMouseEnter={handleContactMouseEnter}
-                            handleContactMouseLeave={handleContactMouseLeave}
-                            activePage={activePage}
-                            viewBox={viewBox}
-                        />
+                        <ASPCmob handleAboutMouseEnter={handleAboutMouseEnter}
+                                 handleAboutMouseLeave={handleAboutMouseLeave}
+                                 handleServicesMouseEnter={handleServicesMouseEnter}
+                                 handleServicesMouseLeave={handleServicesMouseLeave}
+                                 handlePartnersMouseEnter={handlePartnersMouseEnter}
+                                 handlePartnersMouseLeave={handlePartnersMouseLeave}
+                                 handleContactMouseEnter={handleContactMouseEnter}
+                                 handleContactMouseLeave={handleContactMouseLeave}
+                                 activePage={activePage}/>
                     </div>
                 </div>
             </div>

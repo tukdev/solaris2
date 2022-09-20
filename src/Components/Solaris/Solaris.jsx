@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useEffect, useRef, useState} from 'react';
 import './Solaris.css';
 
 
@@ -16,7 +16,7 @@ import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
 
 
-function Solaris({viewBox, color, modalState, setModalState, activePage, setActivePage}) {
+function Solaris({color, modalState, setModalState, activePage, setActivePage}) {
 
     const logoRef = useRef();
 
@@ -46,11 +46,29 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
     const [contactStart, setContactStart] = useState(Math.floor(Math.random() * (30 - 1) + 1));
 
 
+    useLayoutEffect(() => {
+        function updateSize() {
+            aboutCircleTL.current.kill();
+            aboutTextTL.current.kill();
+            servicesCircleTL.current.kill();
+            servicesTextTL.current.kill();
+            partnersCircleTL.current.kill();
+            partnersTextTL.current.kill();
+            contactCircleTL.current.kill();
+            contactTextTL.current.kill();
+            aboutAnimation();
+            servicesAnimation();
+            partnersAnimation();
+            contactAnimation();            
+        }
+        window.addEventListener('resize', updateSize);
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
     /*ABOUT ANIMATION HELPER FUNCTIONS*/
 
-    function aboutAnimation() {
-        MotionPathPlugin.convertToPath('#aboutPath');
-        aboutCircleTL.current.to('.aboutCircle', {
+    function aboutAnimation() {        
+        MotionPathPlugin.convertToPath('#aboutPath');                    
+        aboutCircleTL.current.to('#aboutCircle', {
             duration: 10,
             motionPath: {
                 path: '#aboutPath',
@@ -59,10 +77,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
             },
             ease: "none",
             repeat: -1,
-        })
-            .play(aboutStart);
-
-        MotionPathPlugin.convertToPath('#aboutPath');
+        }).play(aboutStart);        
         aboutTextTL.current.to('#aboutText', {
             duration: 10,
             motionPath: {
@@ -72,8 +87,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
             },
             ease: "none",
             repeat: -1,
-        })
-            .play(aboutStart);
+        }).play(aboutStart);
     }
 
 
@@ -118,7 +132,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
     /*SERVICES ANIMATION HELPER FUNCTIONS*/
     function servicesAnimation() {
         MotionPathPlugin.convertToPath('#servicesPath');
-        servicesCircleTL.current.to('.servicesCircle', {
+        servicesCircleTL.current.to('#servicesCircle', {
             duration: 10,
             motionPath: {
                 path: '#servicesPath',
@@ -127,9 +141,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
             },
             ease: "none",
             repeat: -1
-        })
-            .play(servicesStart)
-
+        }).play(servicesStart);
         servicesTextTL.current.to("#servicesText", {
             duration: 10,
             motionPath: {
@@ -183,7 +195,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
     /*PARTNERS ANIMATION HELPER FUNCTIONS*/
     function partnersAnimation() {
         MotionPathPlugin.convertToPath('#partnersPath');
-        partnersCircleTL.current.to('.partnersCircle', {
+        partnersCircleTL.current.to('#partnersCircle', {
             duration: 10,
             motionPath: {
                 path: '#partnersPath',
@@ -192,9 +204,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
             },
             ease: "none",
             repeat: -1
-        })
-            .play(partnersStart)
-
+        }).play(partnersStart)
         partnersTextTL.current.to("#partnersText", {
             duration: 10,
             motionPath: {
@@ -249,7 +259,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
     /*CONTACT ANIMATION HELPER FUNCTIONS*/
     function contactAnimation() {
         MotionPathPlugin.convertToPath('#contactPath');
-        contactCircleTL.current.to('.contactCircle', {
+        contactCircleTL.current.to('#contactCircle', {
             duration: 10,
             motionPath: {
                 path: '#contactPath',
@@ -258,9 +268,7 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
             },
             ease: "none",
             repeat: -1
-        })
-            .play(contactStart)
-
+        }).play(contactStart)
         contactTextTL.current.to("#contactText", {
             duration: 10,
             motionPath: {
@@ -371,7 +379,6 @@ function Solaris({viewBox, color, modalState, setModalState, activePage, setActi
                             handlePartnersMouseClick={handlePartnersMouseClick}
                             handleContactMouseClick={handleContactMouseClick}
                             activePage={activePage}
-                            viewBox={viewBox}
                         />
                     </div>
                 </div>
