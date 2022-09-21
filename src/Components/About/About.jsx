@@ -7,13 +7,7 @@ function About() {
         <div className='About-container'>
             <div className='about-content p'>
                 <label>
-                    Solaris is a premium events agency, dedicated to delivering elevated experiences for the Web3
-                    community. If you are looking for an
-                    event management agency that will perfectly understand your needs from enquiry to execution, you are
-                    in the right spot. A team of
-                    highly experienced event professionals with backgrounds in Tech, Web3, Academia and the Creative
-                    Industries, Solaris will meticulously bring your vision to life - whether it be in person, virtual
-                    or hybrid.
+                    Solaris is a premium events agency dedicated to delivering elevated experiences for the Web3 community and beyond. We are a tight knit team of professionals with backgrounds in Web3, Social Advocacy and the Creative industries. We believe in community, collaboration, innovation and thinking outside of the box. If you are looking for a diverse agency who will work hard to meticulously bring your unique vision and goals to life, then reach out to us at hello@solaris.agency - we look forward to working with you! 💜
                 </label>
             </div>
         </div>

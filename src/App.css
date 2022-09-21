@@ -22,7 +22,9 @@
     z-index: 9999;
     opacity: 0;
 }
-
+.app-navbar:hover {
+    cursor: url('./fonts/cursor2.svg'), auto;
+}
 
 .app-main-section {
     display: flex;
@@ -39,6 +41,6 @@
     height: 5vh;
     z-index: 999;
 }
-
-
-
+.app-footer-section :hover {
+    cursor: url('./fonts/cursor2.svg'), auto;
+}

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Footer.css';
 
 import {gsap} from 'gsap';
@@ -14,30 +14,46 @@ function Footer({color, activePage}) {
             opacity: 1,
         })
     })
+    const [speed, setSpeed] = useState(400)
+    const [pauseOnHover, setPauseOnHover] = useState(false)
+
+    function handleSlowDown(){
+        setSpeed(100)
+    }
+    function handleSpeedUp(){
+        setSpeed(400)
+    }
+    function handlePause(){
+        setPauseOnHover(true)
+    }
+    function handlePlay(){
+        setPauseOnHover(false)
+    }
     return (
-        <div className='Footer-container'>
+        <div className='Footer-container' onMouseEnter={handleSlowDown} onMouseLeave={handleSpeedUp} >
             <div ref={footerRef} className="footer-content">
-                <Marquee style={{color: color}} gradient={false} speed={400} pauseOnHover={true} pauseOnClick={true}>
-                    <p className='p'>Welcome to The Solariverse – the centre for all things Solaris
-                        <a className='p'
-                           style={{all: 'unset', color: color, textDecoration: 'underline', paddingLeft: 8}}
+                <Marquee style={{color: color}} pauseOnHover={pauseOnHover} speed={speed} gradient={false} pauseOnClick={true}>
+                    <p>
+                        Welcome to The Solariverse – the centre for all things Solaris                        
+                        <a onMouseEnter={handlePause} onMouseLeave={handlePlay}
+                           style={{all: 'unset', color: color, textDecoration: 'underline', paddingLeft: '100px'}}
                            href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
                             Submit a request
                         </a>
-                        <span style={{paddingLeft: '100px'}} className='p'>
+                        <span style={{paddingLeft: '100px'}}>
                             Talk to us: hello@solaris.agency
-                  </span>
+                        </span>
                     </p>
-                    <p className='p'>Welcome to The Solariverse – the centre for all things Solaris
-                        <a
-                            style={{all: 'unset', color: color, textDecoration: 'underline', paddingLeft: 8}}
-                            className='p'
+                    <p>
+                        Welcome to The Solariverse – the centre for all things Solaris                        
+                        <a onMouseEnter={handlePause} onMouseLeave={handlePlay}
+                            style={{all: 'unset', color: color, textDecoration: 'underline', paddingLeft: '100px'}}                            
                             href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
                             Submit a request
                         </a>
-                        <span className='p' style={{paddingLeft: '100px'}}>
+                        <span style={{paddingLeft: '100px'}}>
                             Talk to us: hello@solaris.agency
-                  </span>
+                        </span>
                     </p>
                 </Marquee>
             </div>

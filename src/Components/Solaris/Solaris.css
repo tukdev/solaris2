@@ -105,81 +105,37 @@
 }
 
 
-#aboutPath {
-    fill: transparent;
-    stroke: transparent;
-    stroke-width: 0px;
-    stroke-dasharray: 8;
+#aboutPath {fill: none;stroke: none;stroke-width: 1px;stroke-dasharray: 8;}
+#aboutCircle {fill: none; }
+#aboutText { font-weight: 500; font-size: 20px;line-height: 24px; fill: #68ee95;}
+
+#servicesPath {fill: none;stroke: none;stroke-width: 1px;stroke-dasharray: 8;}
+#servicesCircle { fill: none;}
+#servicesText { font-weight: 500; font-size: 20px;line-height: 24px; fill: #f65139;}
+
+#partnersPath {fill: none;stroke: none;stroke-width: 1px;stroke-dasharray: 8;}
+#partnersCircle { fill: none;}
+#partnersText { font-weight: 500; font-size: 20px;line-height: 24px; fill: #2338df;}
+
+#contactPath {fill: none;stroke: none;stroke-width: 1px;stroke-dasharray: 8;}
+#contactCircle {fill: none;}
+#contactText { font-weight: 500; font-size: 20px;line-height: 24px; fill: #f350f8;}
+
+#aboutText:hover{cursor: url('../../fonts/cursor2.svg'), auto;}
+#servicesText:hover{cursor: url('../../fonts/cursor2.svg'), auto;}
+#partnersText:hover{cursor: url('../../fonts/cursor2.svg'), auto;}
+#contactText:hover{cursor: url('../../fonts/cursor2.svg'), auto;}
+
+@media screen and (max-width: 1024px){
+    .solaris-logo{width: 60vw;height: 60vh; }
+    #aboutText {font-size: 30px;}
+    #servicesText {font-size: 30px;}
+    #partnersText {font-size: 30px;}
+    #contactText {font-size: 30px;}
 }
-
-#aboutText {
-    font-weight: 500;
-    color: #68ee95;
-    fill: #68ee95;
+@media screen and (max-width: 820px){
+    #aboutText {font-size: 40px;}
+    #servicesText {font-size: 40px;}
+    #partnersText {font-size: 40px;}
+    #contactText {font-size: 40px;}
 }
-
-.aboutCircle {
-    fill: transparent;
-    position: relative;
-    z-index: 0;
-}
-
-
-#servicesPath {
-    fill: none;
-    stroke: transparent;
-    stroke-width: 0px;
-    stroke-dasharray: 8;
-}
-
-
-.servicesCircle {
-    fill: transparent;
-}
-
-#servicesText {
-    font-weight: 500;
-    color: #f65139;
-    fill: #f65139;
-}
-
-
-.partnersCircle {
-    fill: transparent;
-}
-
-.absolute {
-    position: absolute;
-}
-
-#partnersPath {
-    fill: none;
-    stroke: transparent;
-    stroke-width: 0px;
-    stroke-dasharray: 8;
-}
-
-#partnersText {
-    font-weight: 500;
-    color: #2338df;
-    fill: #2338df;
-}
-
-
-#contactText {
-    font-weight: 500;
-    color: #f350f8;
-    fill: #f350f8;
-}
-
-#contactPath {
-    fill: none;
-    stroke: transparent;
-    stroke-width: 0px;
-    stroke-dasharray: 8;
-}
-
-.contactCircle {
-    fill: transparent;
-}
-

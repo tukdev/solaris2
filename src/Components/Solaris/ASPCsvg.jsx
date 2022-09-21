@@ -81,7 +81,7 @@ function ASPCsvg({
 
                 <ellipse id="servicesPath" cx="600" cy="300" rx="500" ry="200"/>
                 <circle  onMouseEnter={()=>handleServicesSlowDown()}
-                        onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle" cx="81.4" cy="228.9" r="50"/>                
+                        onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle" cx="81.4" cy="228.9" r="40"/>                
                 <text onClick={(e)=>handleServicesMouseClick(e)}
                       onMouseEnter={()=>handleServicesMouseEnter()} 
                       onMouseLeave={()=>handleServicesMouseLeave()} 

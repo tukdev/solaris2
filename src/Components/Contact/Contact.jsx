@@ -16,7 +16,7 @@ function Contact() {
                 </div>
                 <div className='contact-content-module contact-content-module-mail column p'>
                     <label>Contact us at</label>
-                    <label>hello@solaris</label>
+                    <label>hello@solaris.agency</label>
                 </div>
             </div>
         </div>
