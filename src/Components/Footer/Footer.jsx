@@ -33,25 +33,25 @@ function Footer({color, activePage}) {
         <div className='Footer-container' onMouseEnter={handleSlowDown} onMouseLeave={handleSpeedUp} >
             <div ref={footerRef} className="footer-content">
                 <Marquee style={{color: color}} pauseOnHover={pauseOnHover} speed={speed} gradient={false} pauseOnClick={true}>
-                    <p>
+                    <p className="p">
                         Welcome to The Solariverse – the centre for all things Solaris                        
-                        <a onMouseEnter={handlePause} onMouseLeave={handlePlay}
+                        <a className="p" onMouseEnter={handlePause} onMouseLeave={handlePlay}
                            style={{all: 'unset', color: color, textDecoration: 'underline', paddingLeft: '100px'}}
                            href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
                             Submit a request
                         </a>
-                        <span style={{paddingLeft: '100px'}}>
+                        <span className="p" style={{paddingLeft: '100px'}}>
                             Talk to us: hello@solaris.agency
                         </span>
                     </p>
-                    <p>
+                    <p className="p">
                         Welcome to The Solariverse – the centre for all things Solaris                        
-                        <a onMouseEnter={handlePause} onMouseLeave={handlePlay}
+                        <a className="p" onMouseEnter={handlePause} onMouseLeave={handlePlay}
                             style={{all: 'unset', color: color, textDecoration: 'underline', paddingLeft: '100px'}}                            
                             href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
                             Submit a request
                         </a>
-                        <span style={{paddingLeft: '100px'}}>
+                        <span className="p" style={{paddingLeft: '100px'}}>
                             Talk to us: hello@solaris.agency
                         </span>
                     </p>
