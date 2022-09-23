@@ -5,6 +5,7 @@
     white-space: nowrap;
     overflow: hidden;
     position: relative;
+    opacity: 0;
 }
 
 .footer-content{

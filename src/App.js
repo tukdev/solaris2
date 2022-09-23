@@ -19,8 +19,13 @@ function App() {
   const [loading,setLoading] = useState(true);
 
   useEffect(()=>{
-    gsap.to(".solarisPreLoader",{duration:3, opacity:0, delay:4});
-    setTimeout(()=>setLoading(false),7100);
+    gsap.to(".solarisPreLoader",{duration:4, opacity:0, delay:4});
+    setTimeout(()=>{
+      setLoading(false);
+      gsap.to(".Navbar-container",{duration:3, opacity:1});
+      gsap.to(".solaris-circles",{duration:3, opacity:1});
+      gsap.to(".Footer-container",{duration:3, opacity:1});
+    }, 8100);
   },[]);
 
 
