@@ -28,8 +28,11 @@
 
 .contact-content-module label{
     font-size: 1.5vw;
+    color:#f350f8;
 }
-
+.contact-content-module label a{
+    color:#f350f8;
+}
 
 @keyframes contactAnim {
     0%{
@@ -45,7 +48,6 @@
 @media screen and (max-width: 2600px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-weight: 500;
         font-size: 31px;
     }
@@ -53,14 +55,12 @@
 @media screen and (max-width: 2000px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-size: 26px;
     }
 }
 @media screen and (max-width: 1600px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-size: 23px;
     }
 }
@@ -68,14 +68,12 @@
 @media screen and (max-width: 1280px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-size: 22px;
     }
 }
 @media screen and (max-width: 800px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-size: 22px;
     }
 }
@@ -83,7 +81,6 @@
 @media screen and (max-width: 640px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-size: 16px;
     }
 }
@@ -91,7 +88,6 @@
 @media screen and (max-width: 400px){
     .contact-content-module label{
         all:unset;
-        color:#f350f8;
         font-size: 16px;
     }
 }
