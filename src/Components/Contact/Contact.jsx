@@ -12,7 +12,7 @@ function Contact({windowWidth,windowHeight}) {
         </div>
         <div className='contact-content-module'>
           <label>Contact us at</label>
-          <label><a href="mailto:info@solaris.co.uk">info@solaris.co.uk</a></label>
+          <label>info@solaris.co.uk</label>
         </div>
       </div>
     </div>
