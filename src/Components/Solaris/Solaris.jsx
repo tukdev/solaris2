@@ -44,7 +44,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
 
     const aboutCircleTL = useRef(gsap.timeline());
     const aboutTextTL = useRef(gsap.timeline());
-    const [aboutStart,setAboutStart] = useState(Math.floor(Math.random() * (8 - 1) + 1));
+    const [aboutStart,setAboutStart] = useState(Math.floor(Math.random() * (11 - 1) + 1));
 
     const servicesCircleTL = useRef(gsap.timeline());
     const servicesTextTL = useRef(gsap.timeline());
@@ -52,11 +52,11 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
 
     const partnersCircleTL = useRef(gsap.timeline());
     const partnersTextTL = useRef(gsap.timeline());
-    const [partnersStart, setPartnersStart] = useState(Math.floor(Math.random() * (19 - 1) + 1));
+    const [partnersStart, setPartnersStart] = useState(Math.floor(Math.random() * (10 - 1) + 1));
 
     const contactCircleTL = useRef(gsap.timeline());
     const contactTextTL = useRef(gsap.timeline());
-    const [contactStart, setContactStart] = useState(Math.floor(Math.random() * (10 - 1) + 1));
+    const [contactStart, setContactStart] = useState(Math.floor(Math.random() * (11 - 1) + 1));
 
     
 
