@@ -44,19 +44,19 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
 
     const aboutCircleTL = useRef(gsap.timeline());
     const aboutTextTL = useRef(gsap.timeline());
-    const [aboutStart,setAboutStart] = useState(Math.floor(Math.random() * (11 - 1) + 1));
+    const [aboutStart,setAboutStart] = useState(Math.floor(Math.random() * 4 + 1));
 
     const servicesCircleTL = useRef(gsap.timeline());
     const servicesTextTL = useRef(gsap.timeline());
-    const [servicesStart, setServicesStart] = useState(Math.floor(Math.random() * (10 - 1) + 1));
+    const [servicesStart, setServicesStart] = useState(Math.floor(Math.random() * 3 + 1));
 
     const partnersCircleTL = useRef(gsap.timeline());
     const partnersTextTL = useRef(gsap.timeline());
-    const [partnersStart, setPartnersStart] = useState(Math.floor(Math.random() * (10 - 1) + 1));
+    const [partnersStart, setPartnersStart] = useState(Math.floor(Math.random() * 3 + 7));
 
     const contactCircleTL = useRef(gsap.timeline());
     const contactTextTL = useRef(gsap.timeline());
-    const [contactStart, setContactStart] = useState(Math.floor(Math.random() * (11 - 1) + 1));
+    const [contactStart, setContactStart] = useState(Math.floor(Math.random() * 5 + 6));
 
     
 
