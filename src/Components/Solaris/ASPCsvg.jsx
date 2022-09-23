@@ -73,7 +73,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                       ref={aboutRef}>{activePage === '1' ? 'About' : 'A'} </text>   
                      
 
-                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/4}`} ry={`${viewBox.height/2.75}`}/>
+                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.65}`} ry={`${viewBox.height/2.75}`}/>
                 <circle  onMouseEnter={()=>handleServicesSlowDown()}
                         onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle" cx="81.4" cy="228.9" r="70" fill="lightblue"/>      
                 <text onClick={(e)=>handleServicesMouseClick(e)}
@@ -84,7 +84,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                         
 
 
-                <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.33}`} ry={`${viewBox.height/2.14}`} />
+                <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.10}`} ry={`${viewBox.height/2.14}`} />
                 <circle onMouseEnter={()=>handlePartnersSlowDown()}
                         onMouseLeave={()=>handlePartnersSpeedUp()} id="partnersCircle" cx="87.4" cy="228.9" r="70" fill="lightblue"/>             
                 <text onClick={(e)=>handlePartnersMouseClick(e)}

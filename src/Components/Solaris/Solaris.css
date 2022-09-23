@@ -74,6 +74,7 @@
     max-height: 95vh;
 }
 
+
 #aboutPath {
     fill: none;
     stroke: lightblue;
@@ -84,7 +85,7 @@
 #aboutText{
     font-weight: 500;
     font-size: 2vw;
-    fill: #68ee95; 
+    fill: #5a39df; 
 }
 #aboutCircle{
     fill: transparent;
@@ -124,7 +125,7 @@
 #partnersText{
     font-weight: 500;
     font-size: 2vw;
-    fill: #5a39df;
+    fill: #68ee95;
 }
 
 
@@ -171,7 +172,6 @@
         font-size: 28px;
     }
     #servicesText{
-        font-weight: 500;
         font-size: 28px;
     }
     #partnersText{
@@ -185,7 +185,8 @@
     }
 }
 
-@media screen and (max-width: 1600px){
+
+@media screen and (max-width: 1680px){
     #aboutText{
         font-size: 25px;
     }

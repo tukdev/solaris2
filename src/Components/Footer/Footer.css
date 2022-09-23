@@ -38,7 +38,7 @@
         font-size: 28px;
     }
 }
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1680px){
     .footer-content p{
         font-weight: 500;
         font-size: 23px;

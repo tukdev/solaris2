@@ -62,13 +62,13 @@ function App() {
       setColor('black');
     }
     if(activePage === '1'){
-      setColor('#68ee95'); 
+      setColor('#5a39df'); 
     }
     if(activePage === '2'){
       setColor('#f6b43b');
     }
     if(activePage === '3'){
-      setColor('#5a39df'); 
+      setColor('#68ee95'); 
     }
     if(activePage === '4'){
       setColor('#f350f8'); 
@@ -96,19 +96,17 @@ function App() {
 
   return (
       <div className={modalState || nodeHover ? "App-cursor" : "App"} style={{height:windowHeight}}>
-        {loading ?
+        {loading &&
           <div className='solarisPreLoader'>
             <SolarisPreLoader/>
           </div>            
-        :<></>
         }
         <div className='app-main-section'>
-          {window.innerWidth > windowHeight ?
+          {windowWidth > windowHeight ?
             <Solaris windowWidth={windowWidth} windowHeight={windowHeight} viewBox={viewBox} setNodeHover={setNodeHover} color={color} modalState={modalState} setModalState={setModalState} activePage={activePage} setActivePage={setActivePage}/>
             :
             <SolarisMobile windowWidth={windowWidth} windowHeight={windowHeight} viewBox={viewBox} color={color} modalState={modalState} setModalState={setModalState} activePage={activePage} setActivePage={setActivePage}/>
           } 
-          
         </div>
         
         <div ref={navRef} className='app-navbar'>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;background:#000;">
+	<style type="text/css">
+		.st2{fill:none;stroke:#ffffff;stroke-width:1.6;stroke-miterlimit:10;}
+	</style>
+	<g>
+		<animate attributeName="opacity" from="1" to="0" begin="brandMark.end+0.3s;" dur="1s" fill="freeze"/>
+		<path id="c1" class="st2" d="M156.6,853.31c-14.86-17.42-81.22-99.01-72.81-215.5c7.79-107.98,77.07-207.82,181.87-250.38
+			c104.09-42.27,230.39-22.82,312.54,60.7c91.98,93.51,107.44,245.8,32.84,365.23"
+			stroke-dasharray="1300" stroke-dashoffset="1300">
+		<animate attributeName="stroke-dashoffset" from="1300" to="0" dur="2s" fill="freeze"/>
+		</path>
+		<path id="c2" class="st2" d="M165.93,862.23C136.02,834.09,30.84,728.36,10.79,555.08C5.75,511.49-2.83,386.54,70.36,256.35
+			c87.8-156.18,232.16-211.16,274.31-225.34c45.54-15.31,133.2-43.52,240.59-17.19c159.71,39.16,238.52,168.4,250.77,189.22
+			c85.59,145.51,70.39,330.47-18.91,458.37c-16.86,24.15-82.03,114.62-206.07,151.95c-33.68,10.13-129.6,37.43-236.22-7.14
+			c-14.5-6.06-149.72-65.3-192.19-216.56c-35.68-127.07,8.03-269.54,114.16-353.63c135.82-107.61,296.99-58.72,307.44-55.35
+			c138.5,44.68,193.95,164.46,201.67,181.9c8.66,19.57,54.85,128.81,6.8,254.63c-53.83,140.94-182.65,189.37-201.66,196.15"
+			stroke-dasharray="4600" stroke-dashoffset="4600">
+			<animate id="brandMark" attributeName="stroke-dashoffset" from="4600" to="0" dur="3.75s" fill="freeze"/>
+		</path>	
+		<path id="c3" class="st2" d="M156.6,853.31C128.7,826.08,35.85,732.76,11.06,577.27C-10.92,439.4,33.05,330.71,56.28,283.38
+			C119.31,154.95,219.74,90.9,264.1,66.49C298.86,47.36,402.28-4.17,541.46,5.8c107.41,7.69,183.51,48.24,208.42,62.49
+			C865.78,134.6,922,231.28,942.45,271.49c92.64,182.1,37.74,357.81,29.57,382.57c-5.38,16.29-83.5,240.03-317.18,316.5
+			c-25.51,8.35-170.83,53.52-333.43-10.15C293.3,949.39,224.16,919.26,156.6,853.31z"
+			stroke-dasharray="3100" stroke-dashoffset="3100">
+			<animate attributeName="stroke-dashoffset" from="3100" to="0" dur="2s" fill="freeze"/>
+		</path>
+	</g>
+</svg>

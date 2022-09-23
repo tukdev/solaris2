@@ -66,7 +66,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function aboutAnimation(){
         MotionPathPlugin.convertToPath('#aboutPath');
         aboutCircleTL.current.to('#aboutCircle', {
-        duration: 8,
+        duration: 11,
         motionPath: {
             path: '#aboutPath',
             align: '#aboutPath',
@@ -266,7 +266,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function contactAnimation(){
         MotionPathPlugin.convertToPath('#contactPath');
         contactCircleTL.current.to('#contactCircle', {
-            duration: 10,
+            duration: 11,
             motionPath: {
                 path: '#contactPath',
                 align: '#contactPath',
