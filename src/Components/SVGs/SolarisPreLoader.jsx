@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 
 function SolarisPreLoader({viewBox}) {
   return (
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%"
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80%" height="80%"
 	 		viewBox="0 0 1000 1000" style={{enableBackground:'new 0 0 1000 1000',background:'#000000'}}>
 			<g>
-				<animate id="curves" attributeName="opacity" from="1" to="0" begin="curve3.end+0.3s;" dur="1s" fill="freeze"/>						
+				<animate id="curves" attributeName="opacity" from="1" to="0" begin="curve3.end+0.3s;" dur="1s" fill="freeze"/>
 				<path id="c1" className="st0" d="M155.6,855.31c-14.86-17.42-81.22-99.01-72.81-215.5c7.79-107.98,77.07-207.82,181.87-250.38
 					c104.09-42.27,230.39-22.82,312.54,60.7c91.98,93.51,107.44,245.8,32.84,365.23"
 					strokeDasharray="1300" strokeDashoffset="1300">
