@@ -17,18 +17,7 @@ function Footer({windowWidth,color,activePage}) {
     }    
   },[]);
 
-/*  function handleSlowDown(e){
-     e.preventDefault();
-    setFooterPlay(false)
-    setFooterSpeed(50);
-    setFooterPlay(true)
-  }
-  function handleSpeedUp(e){
-    e.preventDefault();
-    setFooterPlay(false)
-    setFooterSpeed(150);
-    setFooterPlay(true)
-  }*/
+
   return (
     <div className='Footer-container'>
         <div ref={footerRef} className="footer-content" 
