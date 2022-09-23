@@ -1,59 +1,72 @@
-.Navbar-container {
+.Navbar-container{
     display: flex;
-    align-items: start;
-    padding-left: 3vw;
-    padding-top: 3vw;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
 }
 
-.navbar {
+.navbar{
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-sizing: border-box;
-    gap: 0.2rem;
+    
 }
 
-.navbar-link {
+.navbar-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.5vw;
 }
 
-.navbar-link label {
+.navbar-link label{
     all: unset;
-    text-align: right;
+    font-size: 1.5vw;
     font-weight: 500;
 }
 
 
-@media screen and (min-width: 1024px) {
-    .navbar-link label {
+
+@media screen and (max-width: 2600px){
+    .navbar-link label{
         font-weight: 500;
+        font-size: 33px;
     }
 }
-
-@media screen and (max-width: 400px) and (min-width: 1024px) {
-    .navbar-link label {
+@media screen and (max-width: 2000px){
+    .navbar-link label{
         font-weight: 500;
+        font-size: 28px;
     }
 }
-
-
-@media screen and (max-width: 400px) and (min-width: 320px) {
-    .navbar-link label {
+@media screen and (max-width: 1600px){
+    .navbar-link label{
         font-weight: 500;
+        font-size: 23px;
     }
 }
 
-@media only screen and (max-width: 320px) and (min-width: 280px) {
-    .navbar-link label {
-        all: unset;
+@media screen and (max-width: 1280px){
+    .navbar-link label{
+        font-weight: 500;
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 800px){
+    .navbar-link label{
+        font-weight: 500;
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 640px){
+    .navbar-link label{
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 400px){
+    .navbar-link label{
+        font-weight: 500;
+        font-size: 18px;
     }
 }
 
-@media only screen and (max-width: 280px) {
-    .navbar-link label {
-        all: unset;
-    }
-}

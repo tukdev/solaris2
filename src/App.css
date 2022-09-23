@@ -1,46 +1,93 @@
-.App {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    cursor: url('./fonts/cursor1.svg'), auto;
+.App{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  cursor: url('./fonts/cursor1.svg'),auto;
 }
 
-.App-cursor {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    cursor: url('./fonts/cursor2.svg'), auto;
+
+.App-cursor{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  cursor: url('./fonts/cursor2.svg'),auto;
 }
 
-.app-navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    opacity: 0;
-}
-.app-navbar:hover {
-    cursor: url('./fonts/cursor2.svg'), auto;
+
+.solarisPreLoader{
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
 }
 
-.app-main-section {
-    display: flex;
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    z-index: 99;
+
+
+.st0{
+  fill:none;
+  stroke:#ffffff;
+  stroke-width:1.6;
+  stroke-miterlimit:10;
+}
+.st1{
+  fill:#000000;
+  width:100%;
+  height:100%;
 }
 
-.app-footer-section {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    height: 5vh;
-    z-index: 999;
+
+
+.app-navbar{
+  z-index: 9999;
+  /*opacity: 0;*/
 }
-.app-footer-section :hover {
-    cursor: url('./fonts/cursor2.svg'), auto;
+
+.app-main-section{
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 95%;
+  z-index: 99;
 }
+.app-footer-section{
+  display: flex;
+  width: 100vw;
+  height: 5%;
+  z-index: 999;
+}
+
+
+@media screen and (max-width: 1024px){
+  .app-navbar{
+    top: 2rem;
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 1024px){
+  .app-navbar{
+    top: 2rem;
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 800px){
+  .app-navbar{
+    top: 2rem;
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 640px){
+  .app-navbar{
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px){
+  .app-navbar{
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+

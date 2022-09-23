@@ -2,19 +2,19 @@ import React from 'react'
 import './Partners.css';
 
 
-import {ReactComponent as ComputeOverData} from '../../assets/PartnerLogos/computeOD.svg';
-import {ReactComponent as ConcensusLab} from '../../assets/PartnerLogos/consensuslab.svg';
-import {ReactComponent as CryptoEcon} from '../../assets/PartnerLogos/cryptoecon.svg';
-import {ReactComponent as FileCoin} from '../../assets/PartnerLogos/filecoin.svg';
-import {ReactComponent as FVM} from '../../assets/PartnerLogos/FVM.svg';
-import {ReactComponent as Lotus} from '../../assets/PartnerLogos/lotus.svg';
-import {ReactComponent as PLlabs} from '../../assets/PartnerLogos/PLlabs.svg';
-import {ReactComponent as RetrievalMarkets} from '../../assets/PartnerLogos/RetrievalMarkets.svg';
+import {ReactComponent as ComputeOverData} from '../../assets/Logos/computeOD.svg';
+import {ReactComponent as ConcensusLab} from '../../assets/Logos/consensuslab.svg';
+import {ReactComponent as CryptoEcon} from '../../assets/Logos/cryptoecon.svg';
+import {ReactComponent as FileCoin} from '../../assets/Logos/filecoin.svg';
+import {ReactComponent as FVM} from '../../assets/Logos/FVM.svg';
+import {ReactComponent as Lotus} from '../../assets/Logos/lotus.svg';
+import {ReactComponent as PLlabs} from '../../assets/Logos/PLlabs.svg';
+import {ReactComponent as RetrievalMarkets} from '../../assets/Logos/RetrievalMarkets.svg';
 
 
-function Partners() {
+function Partners({windowWidth, windowHeight}) {
   return (
-    <div className='Partners-container'>
+    <div className='Partners-container' style={{width: windowWidth, height: windowHeight*0.95}}>
       <div className='partners-container-wrapper'>
         <div className='partners-module'>
           <ComputeOverData id="cod"/>

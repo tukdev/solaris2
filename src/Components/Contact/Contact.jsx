@@ -2,25 +2,21 @@ import React from 'react';
 import './Contact.css';
 
 
-function Contact() {
-    return (
-        <div className='Contact-container'>
-            <div className='contact-content-wrapper'>
-                <div className='contact-content-module p'>
-                    <label>Carolyn Lee</label>
-                    <label>Co-Director</label>
-                </div>
-                <div className='contact-content-module row p'>
-                    <label>Polly Chan</label>
-                    <label>Co-Director</label>
-                </div>
-                <div className='contact-content-module contact-content-module-mail column p'>
-                    <label>Contact us at</label>
-                    <label>hello@solaris.agency</label>
-                </div>
-            </div>
+function Contact({windowWidth,windowHeight}) {
+  return (
+    <div className='Contact-container' style={{width: windowWidth, height: windowHeight*95/100}}>
+      <div className='contact-content-wrapper'>
+        <div className='contact-content-module'>
+          <label>Carolyn Lee, Co-Director</label>  
+          <label>Polly Chan, Co-Director</label>
         </div>
-    )
+        <div className='contact-content-module'>
+          <label>Contact us at</label>
+          <label>info@solaris.co.uk</label>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Contact

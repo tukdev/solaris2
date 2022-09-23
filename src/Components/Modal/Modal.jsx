@@ -12,27 +12,25 @@ import Partners from '../Partners/Partners';
 
 import {motion,AnimatePresence} from 'framer-motion';
 
-function Modal({activePage,setActivePage}) {
+function Modal({windowWidth, windowHeight, activePage,setActivePage}) {
   
   return (
-    
     <div onClick={()=>setActivePage('')} className='Modal-container'>
         <div className='modal-content'>
             <div className='modal-content-main'>
               {activePage === '1' && 
-                <About/>
+                <About windowWidth={windowWidth} windowHeight={windowHeight}/>
               }
               {activePage === '2' && 
-                <Services/>
+                <Services windowWidth={windowWidth} windowHeight={windowHeight}/>
               }
               {activePage === '3' && 
-                <Partners/>
+                <Partners windowWidth={windowWidth} windowHeight={windowHeight}/>
               }
               {activePage === '4' && 
-                <Contact/>
+                <Contact windowWidth={windowWidth} windowHeight={windowHeight}/>
               }
             </div>
-
         </div>
     </div>
   )

@@ -1,75 +1,101 @@
 
-.Contact-container {
+.Contact-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 95vh;
     animation: contactAnim 1s ease;
 }
 
 
-.contact-content-wrapper {
+.contact-content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-content-module{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100vw;
-}
-
-
-.contact-content-module {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #f350f8;
+    margin: 1rem;
 }
 
-.contact-content-module-mail {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #f350f8;
-    margin-top: 20px;
+
+.contact-content-module label{
+    font-size: 1.5vw;
 }
 
-.row {
-    flex-direction: row
-}
-
-.column {
-    flex-direction: column
-}
 
 @keyframes contactAnim {
-    0% {
+    0%{
         opacity: 0;
     }
-    100% {
+    100%{
         opacity: 1;
     }
 }
 
 
-@media screen and (max-width: 400px) {
-    .contact-content-module {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #f350f8;
-    }
 
-    .contact-content-module label {
-        display: flex;
-        all: unset;
-        color: #f350f8;
+@media screen and (max-width: 2600px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-weight: 500;
+        font-size: 31px;
     }
 }
+@media screen and (max-width: 2000px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 800px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contact-content-module label{
+        all:unset;
+        color:#f350f8;
+        font-size: 16px;
+    }
+}
+
 
 
 
