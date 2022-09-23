@@ -19,8 +19,8 @@ function App() {
   const [loading,setLoading] = useState(true);
 
   useEffect(()=>{
-    gsap.to(".solarisPreLoader",{duration:2, opacity:0, delay:4});
-    setTimeout(()=>setLoading(false),6100);
+    gsap.to(".solarisPreLoader",{duration:3, opacity:0, delay:4});
+    setTimeout(()=>setLoading(false),7100);
   },[]);
 
 
