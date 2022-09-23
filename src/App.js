@@ -19,11 +19,11 @@ function App() {
   const [loading,setLoading] = useState(true);
 
   useEffect(()=>{
-    gsap.to(".solarisPreLoader",{duration:4, opacity:0, delay:4});
-    gsap.to(".Navbar-container",{duration:3.8, opacity:1, delay:4.2});
-    gsap.to(".solaris-circles",{duration:3.8, opacity:1, delay:4.2});
-    gsap.to(".Footer-container",{duration:3.8, opacity:1, delay:4.2});
-    setTimeout(()=>setLoading(false), 8000);
+    gsap.to(".solarisPreLoader",{duration:3.2, opacity:0, delay:4});
+    gsap.to(".Navbar-container",{duration:3, opacity:1, delay:4.2});
+    gsap.to(".solaris-circles",{duration:3, opacity:1, delay:4.2});
+    gsap.to(".Footer-container",{duration:3, opacity:1, delay:4.2});
+    setTimeout(()=>setLoading(false), 7200);
   },[]);
 
 
@@ -98,7 +98,7 @@ function App() {
       <div className={modalState || nodeHover ? "App-cursor" : "App"} style={{height:windowHeight}}>
         {loading ?
           <div className='solarisPreLoader'>
-            <SolarisPreLoader viewBox={viewBox}/>
+            <SolarisPreLoader/>
           </div>            
         :<></>
         }
