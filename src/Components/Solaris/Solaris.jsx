@@ -79,7 +79,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
 
         MotionPathPlugin.convertToPath('#aboutPath');
         aboutTextTL.current.to('#aboutText', {
-        duration: 8,
+        duration: 11,
         motionPath: {
             path: '#aboutPath',
             align: '#aboutPath',
@@ -278,7 +278,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
             .play(contactStart)
 
         contactTextTL.current.to("#contactText", {
-            duration: 10,
+            duration: 11,
             motionPath: {
                 path: '#contactPath',
                 align: '#contactPath',
