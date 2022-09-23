@@ -10,8 +10,6 @@ function Footer({windowWidth,color,activePage}) {
 
   const [footerSpeed,setFooterSpeed] = useState(150);
   const [footerPlay,setFooterPlay] = useState(true);
-  const [stopTicker,setStopTicker] = useState(false);
-
 
   useEffect(()=>{
     if(windowWidth < 500){
@@ -19,24 +17,35 @@ function Footer({windowWidth,color,activePage}) {
     }    
   },[]);
 
-  
+/*  function handleSlowDown(e){
+     e.preventDefault();
+    setFooterPlay(false)
+    setFooterSpeed(50);
+    setFooterPlay(true)
+  }
+  function handleSpeedUp(e){
+    e.preventDefault();
+    setFooterPlay(false)
+    setFooterSpeed(150);
+    setFooterPlay(true)
+  }*/
   return (
     <div className='Footer-container'>
-        <div ref={footerRef} className="footer-content">
+        <div ref={footerRef} className="footer-content" 
+              onMouseEnter={()=>setFooterSpeed(50)} onMouseLeave={()=>setFooterSpeed(150)}>
 
           <Marquee className="footerMarquee" 
                    style= {{color: color}} 
                    gradient={false} 
                    speed={footerSpeed} 
-                   pauseOnHover={stopTicker} 
-                   pauseOnClick={false}
+                   play={footerPlay}
                    > 
             <p>
               Welcome to The Solariverse – the centre for all things Solaris
             </p>
              
             <p>
-              <a onMouseEnter={()=>setStopTicker(true)} onMouseLeave={()=>setStopTicker(false)}
+              <a onMouseEnter={()=>setFooterPlay(false)} onMouseLeave={()=>setFooterPlay(true)}
                 style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
               Submit a request.
               </a>
@@ -44,7 +53,7 @@ function Footer({windowWidth,color,activePage}) {
 
             <p>
               Talk to us:
-              <a onMouseEnter={()=>setStopTicker(true)} onMouseLeave={()=>setStopTicker(false)}
+              <a onMouseEnter={()=>setFooterPlay(false)} onMouseLeave={()=>setFooterPlay(true)}
                 style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
                  hello@solaris.agency
               </a>
@@ -55,7 +64,7 @@ function Footer({windowWidth,color,activePage}) {
             </p>
              
             <p>
-              <a onMouseEnter={()=>setStopTicker(true)} onMouseLeave={()=>setStopTicker(false)}
+              <a onMouseEnter={()=>setFooterPlay(false)} onMouseLeave={()=>setFooterPlay(true)}
                 style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
               Submit a request.
               </a>
@@ -63,7 +72,7 @@ function Footer({windowWidth,color,activePage}) {
 
             <p>
               Talk to us:
-              <a onMouseEnter={()=>setStopTicker(true)} onMouseLeave={()=>setStopTicker(false)}
+              <a onMouseEnter={()=>setFooterPlay(false)} onMouseLeave={()=>setFooterPlay(true)}
                 style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
                  hello@solaris.agency
               </a>
