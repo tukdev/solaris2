@@ -27,34 +27,34 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
 
       useEffect(()=>{
             if(activePage === ''){
-               aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: blur(0px)';
+               aboutRef.current.style = '-webkit-filter: blur(0px)';
+               servicesRef.current.style = '-webkit-filter: blur(0px)';
+               partnersRef.current.style = '-webkit-filter: blur(0px)';
+               contactRef.current.style = '-webkit-filter: blur(0px)';
             }
             if(activePage === '1'){
-               aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: blur(8px)';
-               partnersRef.current.style = 'filter: blur(8px)';
-               contactRef.current.style = 'filter: blur(8px)';
+               aboutRef.current.style = '-webkit-filter: blur(0px)';
+               servicesRef.current.style = '-webkit-filter: blur(8px)';
+               partnersRef.current.style = '-webkit-filter: blur(8px)';
+               contactRef.current.style = '-webkit-filter: blur(8px)';
             }
             if(activePage === '2'){
-               aboutRef.current.style = 'filter: blur(8px)';
-               servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: blur(8px)';
-               contactRef.current.style = 'filter: blur(8px)';
+               aboutRef.current.style = '-webkit-filter: blur(8px)';
+               servicesRef.current.style = '-webkit-filter: blur(0px)';
+               partnersRef.current.style = '-webkit-filter: blur(8px)';
+               contactRef.current.style = '-webkit-filter: blur(8px)';
             }
             if(activePage === '3'){
-               aboutRef.current.style = 'filter: blur(8px)';
-               servicesRef.current.style = 'filter: blur(8px)';
-               partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: blur(8px)';
+               aboutRef.current.style = '-webkit-filter: blur(8px)';
+               servicesRef.current.style = '-webkit-filter: blur(8px)';
+               partnersRef.current.style = '-webkit-filter: blur(0px)';
+               contactRef.current.style = '-webkit-filter: blur(8px)';
             }   
             if(activePage === '4'){
-               aboutRef.current.style = 'filter: blur(8px)';
-               servicesRef.current.style = 'filter: blur(8px)';
-               partnersRef.current.style = 'filter: blur(8px)';
-               contactRef.current.style = 'filter: blur(0px)';
+               aboutRef.current.style = '-webkit-filter: blur(8px)';
+               servicesRef.current.style = '-webkit-filter: blur(8px)';
+               partnersRef.current.style = '-webkit-filter: blur(8px)';
+               contactRef.current.style = '-webkit-filter: blur(0px)';
             }
       },[activePage]);
 
