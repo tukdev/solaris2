@@ -26,7 +26,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
       const contactRef = useRef();
 
       useEffect(()=>{
-/*            if(activePage === ''){
+            if(activePage === ''){
                aboutRef.current.style = 'filter: blur(0px)';
                servicesRef.current.style = 'filter: blur(0px)';
                partnersRef.current.style = 'filter: blur(0px)';
@@ -55,7 +55,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                servicesRef.current.style = 'filter: blur(8px)';
                partnersRef.current.style = 'filter: blur(8px)';
                contactRef.current.style = 'filter: blur(0px)';
-            }*/
+            }
       },[activePage]);
 
       

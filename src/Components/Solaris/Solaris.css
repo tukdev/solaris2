@@ -85,8 +85,6 @@
     font-weight: 500;
     font-size: 2vw;
     fill: #5a39df; 
-    -webkit-filter: blur(5px);
-    filter: blur(8px);
 }
 #aboutCircle{    fill: transparent;}
 
