@@ -4,7 +4,7 @@ import './Footer.css';
 import Marquee from 'react-fast-marquee';
 
 
-function Footer({windowWidth,setNodeHover,color,activePage}) {
+function Footer({windowWidth,windowHeight,setNodeHover,color,activePage}) {
 
   const footerRef=useRef();
 

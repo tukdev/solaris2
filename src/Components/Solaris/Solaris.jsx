@@ -20,16 +20,6 @@ gsap.registerPlugin(MotionPathPlugin);
 function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState, setModalState, activePage,setActivePage}) {
 
     const logoRef = useRef();
-    
-    /*
-    useEffect(()=>{
-       gsap.to(logoRef.current,{
-        duration: 2,
-        opacity: 1,
-        ease: "linear"
-       })
-    });
-    */
 
     function fadeNode(node){
         gsap.fromTo(node,{
