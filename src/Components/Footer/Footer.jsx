@@ -4,22 +4,22 @@ import './Footer.css';
 import Marquee from 'react-fast-marquee';
 
 
-function Footer({windowWidth,color,activePage}) {
+function Footer({windowWidth,setNodeHover,color,activePage}) {
 
   const footerRef=useRef();
 
   const [footerSpeed,setFooterSpeed] = useState(100);  
 
   useEffect(()=>{
-    if(windowWidth < 500){
-      setFooterSpeed(70);
+    if(windowWidth < windowHeight){
+      setFooterSpeed(50);
     }    
   },[]);
 
 
   return (
     <div className='Footer-container'>
-        <div ref={footerRef} className="footer-content">
+        <div ref={footerRef} className="footer-content" onMouseEnter={()=>setNodeHover(true)} onMouseLeave={()=>setNodeHover(false)}>
 
           <Marquee className="footerMarquee" 
                    style= {{color: color}} 
@@ -33,14 +33,14 @@ function Footer({windowWidth,color,activePage}) {
              
             <p>
               <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
-              Submit a request.
+                Submit a request.
               </a>
             </p>
 
             <p>
               Talk to us:
               <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
-                 hello@solaris.agency
+                hello@solaris.agency
               </a>
             </p> 
     
@@ -57,7 +57,7 @@ function Footer({windowWidth,color,activePage}) {
             <p>
               Talk to us:
               <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
-                 hello@solaris.agency
+                hello@solaris.agency
               </a>
             </p> 
           </Marquee>

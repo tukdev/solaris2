@@ -54,7 +54,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
     function aboutAnimation(){
         MotionPathPlugin.convertToPath('#aboutPath');
         aboutCircleTL.current.to('#aboutCircle', {
-        duration: 8,
+        duration: 10,
         motionPath: {
             path: '#aboutPath',
             align: '#aboutPath',
@@ -67,7 +67,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
 
         MotionPathPlugin.convertToPath('#aboutPath');
         aboutTextTL.current.to('#aboutText', {
-        duration: 8,
+        duration: 10,
         motionPath: {
             path: '#aboutPath',
             align: '#aboutPath',
@@ -109,7 +109,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
     function servicesAnimation(){
         MotionPathPlugin.convertToPath('#servicesPath');
         servicesCircleTL.current.to('#servicesCircle', {
-            duration: 10,
+            duration: 11,
             motionPath: {
                 path: '#servicesPath',
                 align: '#servicesPath',
@@ -121,7 +121,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
             .play(servicesStart)
 
         servicesTextTL.current.to("#servicesText", {
-            duration: 10,
+            duration: 11,
             motionPath: {
                 path: '#servicesPath',
                 align: '#servicesPath',
@@ -161,7 +161,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
     function partnersAnimation(){
         MotionPathPlugin.convertToPath('#partnersPath');
         partnersCircleTL.current.to('#partnersCircle', {
-            duration: 9,
+            duration: 10,
             motionPath: {
                 path: '#partnersPath',
                 align: '#partnersPath',
@@ -173,7 +173,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
             .play(partnersStart)
 
         partnersTextTL.current.to("#partnersText", {
-            duration: 9,
+            duration: 10,
             motionPath: {
                 path: '#partnersPath',
                 align: '#partnersPath',
@@ -213,7 +213,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
     function contactAnimation(){
         MotionPathPlugin.convertToPath('#contactPath');
         contactCircleTL.current.to('#contactCircle', {
-            duration: 10,
+            duration: 11,
             motionPath: {
                 path: '#contactPath',
                 align: '#contactPath',
@@ -225,7 +225,7 @@ function SolarisMobile({windowWidth,windowHeight,viewBox,color,modalState, setMo
             .play(contactStart)
 
         contactTextTL.current.to("#contactText", {
-            duration: 10,
+            duration: 11,
             motionPath: {
                 path: '#contactPath',
                 align: '#contactPath',

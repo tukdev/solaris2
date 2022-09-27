@@ -81,15 +81,12 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-
 #aboutText{
     font-weight: 500;
     font-size: 2vw;
     fill: #5a39df; 
 }
-#aboutCircle{
-    fill: transparent;
-}
+#aboutCircle{    fill: transparent;}
 
 
 #servicesPath{
@@ -98,52 +95,39 @@
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-
-
-#servicesCircle{
-    fill: transparent;
-}
 #servicesText{
     font-weight: 500;
     font-size: 2vw;
     fill: #f6b43b;
 }
+#servicesCircle{    fill: transparent;}
 
 
-
-
-#partnersCircle{
-    fill: transparent;
-}
 #partnersPath {
     fill: none;
     stroke: lightblue;
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-
 #partnersText{
     font-weight: 500;
     font-size: 2vw;
     fill: #68ee95;
 }
+#partnersCircle{    fill: transparent;}
 
-
-
-#contactText{
-    font-weight: 500;
-    font-size: 2vw;
-    fill: #f350f8;
-}
 #contactPath {
     fill: none;
     stroke: lightblue;
     stroke-width: 0px;
     stroke-dasharray: 8;
 }
-#contactCircle{
-    fill:transparent;
+#contactText{
+    font-weight: 500;
+    font-size: 2vw;
+    fill: #f350f8;
 }
+#contactCircle{    fill:transparent;}
 
 
 

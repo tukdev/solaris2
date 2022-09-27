@@ -91,7 +91,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                       onMouseEnter={()=>handlePartnersMouseEnter()} 
                       onMouseLeave={()=>handlePartnersMouseLeave()} 
                       id="partnersText"
-                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
+                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P'}</text>
 
 
                 <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.4}`} ry={`${viewBox.height/3}`}  />
@@ -101,7 +101,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                       onMouseEnter={()=>handleContactMouseEnter()} 
                       onMouseLeave={()=>handleContactMouseLeave()} 
                       id="contactText"
-                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text> 
+                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text> 
 
         </svg>        
        

@@ -76,7 +76,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handlePartnersMouseClick(e)} 
                       id="partnersText"
-                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
+                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P'}</text>
 
 
                 <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.9}`}  />
@@ -84,7 +84,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handleContactMouseClick(e)} 
                       id="contactText"
-                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text> 
+                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text> 
 
         </svg>        
        

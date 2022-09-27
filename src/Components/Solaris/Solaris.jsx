@@ -66,7 +66,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function aboutAnimation(){
         MotionPathPlugin.convertToPath('#aboutPath');
         aboutCircleTL.current.to('#aboutCircle', {
-        duration: 11,
+        duration: 13,
         motionPath: {
             path: '#aboutPath',
             align: '#aboutPath',
@@ -79,7 +79,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
 
         MotionPathPlugin.convertToPath('#aboutPath');
         aboutTextTL.current.to('#aboutText', {
-        duration: 11,
+        duration: 13,
         motionPath: {
             path: '#aboutPath',
             align: '#aboutPath',
@@ -127,7 +127,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function handleAboutSpeedUp(){
         aboutCircleTL.current.timeScale(1);
         aboutTextTL.current.timeScale(1);
-        console.log('mouse leave speed up');
     }
 
 
@@ -135,7 +134,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function servicesAnimation(){
         MotionPathPlugin.convertToPath('#servicesPath');
         servicesCircleTL.current.to('#servicesCircle', {
-            duration: 10,
+            duration: 12,
             motionPath: {
                 path: '#servicesPath',
                 align: '#servicesPath',
@@ -147,7 +146,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
             .play(servicesStart)
 
         servicesTextTL.current.to("#servicesText", {
-            duration: 10,
+            duration: 12,
             motionPath: {
                 path: '#servicesPath',
                 align: '#servicesPath',
@@ -174,7 +173,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
         setNodeHover(false);
         servicesTextTL.current.play();
         servicesCircleTL.current.play();
-        console.log('mouse leave');
     }
     function handleServicesMouseClick(e){
         e.stopPropagation();
@@ -189,7 +187,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function handleServicesSpeedUp(){
         servicesCircleTL.current.timeScale(1);
         servicesTextTL.current.timeScale(1);
-        console.log('mouse leave speed up');
     }
 
 
@@ -197,7 +194,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function partnersAnimation(){
         MotionPathPlugin.convertToPath('#partnersPath');
         partnersCircleTL.current.to('#partnersCircle', {
-            duration: 10,
+            duration: 12,
             motionPath: {
                 path: '#partnersPath',
                 align: '#partnersPath',
@@ -209,7 +206,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
             .play(partnersStart)
 
         partnersTextTL.current.to("#partnersText", {
-            duration: 10,
+            duration: 12,
             motionPath: {
                 path: '#partnersPath',
                 align: '#partnersPath',
@@ -231,7 +228,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
         else if(activePage === '3'){
             partnersTextTL.current.pause();
             partnersCircleTL.current.pause();
-            console.log('mouse enter');
         }
     }
 
@@ -239,7 +235,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
          setNodeHover(false);
          partnersTextTL.current.play();
          partnersCircleTL.current.play();
-         console.log('mouse leave');
     }
 
     function handlePartnersMouseClick(e){
@@ -256,17 +251,14 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function handlePartnersSpeedUp(){
         partnersCircleTL.current.timeScale(1);
         partnersTextTL.current.timeScale(1);
-        console.log('mouse leave speed up');
     }
-
-
 
 
     /*CONTACT ANIMATION HELPER FUNCTIONS*/
     function contactAnimation(){
         MotionPathPlugin.convertToPath('#contactPath');
         contactCircleTL.current.to('#contactCircle', {
-            duration: 11,
+            duration: 13,
             motionPath: {
                 path: '#contactPath',
                 align: '#contactPath',
@@ -278,7 +270,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
             .play(contactStart)
 
         contactTextTL.current.to("#contactText", {
-            duration: 11,
+            duration: 13,
             motionPath: {
                 path: '#contactPath',
                 align: '#contactPath',
@@ -299,7 +291,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
         else if(activePage === '4'){
             contactTextTL.current.pause();
             contactCircleTL.current.pause();
-            console.log('mouse enter');
         }
         
     }
@@ -307,7 +298,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
          setNodeHover(false);
          contactTextTL.current.play();
          contactCircleTL.current.play();
-         console.log('mouse leave');
     }
 
     function handleContactMouseClick(e){
@@ -324,7 +314,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     function handleContactSpeedUp(){
         contactCircleTL.current.timeScale(1);
         contactTextTL.current.timeScale(1);
-        console.log('mouse leave speed up');
     }
 
 
