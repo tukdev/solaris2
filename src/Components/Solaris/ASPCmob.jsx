@@ -26,26 +26,26 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
             }
             if(activePage === '1'){
                aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: blur(20px)';
-               partnersRef.current.style = 'filter: blur(20px)';
-               contactRef.current.style = 'filter: blur(20px)';
+               servicesRef.current.style = 'filter: blur(8px)';
+               partnersRef.current.style = 'filter: blur(8px)';
+               contactRef.current.style = 'filter: blur(8px)';
             }
             if(activePage === '2'){
-               aboutRef.current.style = 'filter: blur(20px)';
+               aboutRef.current.style = 'filter: blur(8px)';
                servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: blur(20px)';
-               contactRef.current.style = 'filter: blur(20px)';
+               partnersRef.current.style = 'filter: blur(8px)';
+               contactRef.current.style = 'filter: blur(8px)';
             }
             if(activePage === '3'){
-               aboutRef.current.style = 'filter: blur(20px)';
-               servicesRef.current.style = 'filter: blur(20px)';
+               aboutRef.current.style = 'filter: blur(8px)';
+               servicesRef.current.style = 'filter: blur(8px)';
                partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: blur(20px)';
+               contactRef.current.style = 'filter: blur(8px)';
             }   
             if(activePage === '4'){
-               aboutRef.current.style = 'filter: blur(20px)';
-               servicesRef.current.style = 'filter: blur(20px)';
-               partnersRef.current.style = 'filter: blur(20px)';
+               aboutRef.current.style = 'filter: blur(8px)';
+               servicesRef.current.style = 'filter: blur(8px)';
+               partnersRef.current.style = 'filter: blur(8px)';
                contactRef.current.style = 'filter: blur(0px)';
             }
       },[activePage]);
@@ -59,16 +59,16 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text  
                       onClick={(e)=>handleAboutMouseClick(e)}
                       id="aboutText"
-                      ref={aboutRef}>{activePage === '1' ? 'About' : 'A'}
+                      ref={aboutRef}>{activePage === '1' ? 'About' : 'A\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
                       </text>      
 
 
-                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.7}`} ry={`${viewBox.height/10.9}`}/>
+                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.8}`} ry={`${viewBox.height/10.9}`}/>
                 <circle  onClick={(e)=>handleServicesMouseClick(e)} id="servicesCircle" cx="87.4" cy="228.9" r="30" fill="lightblue"/>      
                 <text 
                       onClick={(e)=>handleServicesMouseClick(e)} 
                       id="servicesText"
-                      ref={servicesRef}>{activePage === '2' ? 'Services' : 'S'}</text>
+                      ref={servicesRef}>{activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
 
 
                 <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`}  rx={`${viewBox.width/2.85}`} ry={`${viewBox.height/4.36}`} />
@@ -76,7 +76,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handlePartnersMouseClick(e)} 
                       id="partnersText"
-                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P'}</text>
+                      ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
 
 
                 <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.9}`}  />
@@ -84,7 +84,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handleContactMouseClick(e)} 
                       id="contactText"
-                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text> 
+                      ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text> 
 
         </svg>        
        
