@@ -34,26 +34,26 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
             }
             if(activePage === '1'){
                aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: url(#blur)';
-               partnersRef.current.style = 'filter: url(#blur)';
-               contactRef.current.style = 'filter: url(#blur)';
+               servicesRef.current.style = 'filter: blur(2px)';
+               partnersRef.current.style = 'filter: blur(2px)';
+               contactRef.current.style = 'filter: blur(2px)';
             }
             if(activePage === '2'){
-               aboutRef.current.style = 'filter: url(#blur);';
+               aboutRef.current.style = 'filter: blur(2px);';
                servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: url(#blur)';
-               contactRef.current.style = 'filter: url(#blur)';
+               partnersRef.current.style = 'filter: blur(2px)';
+               contactRef.current.style = 'filter: blur(2px)';
             }
             if(activePage === '3'){
-               aboutRef.current.style = 'filter: url(#blur)';
-               servicesRef.current.style = 'filter: url(#blur)';
+               aboutRef.current.style = 'filter: blur(2px)';
+               servicesRef.current.style = 'filter: blur(2px)';
                partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: url(#blur)';
+               contactRef.current.style = 'filter: blur(2px)';
             }   
             if(activePage === '4'){
-               aboutRef.current.style = 'filter: url(#blur)';
-               servicesRef.current.style = 'filter: url(#blur)';
-               partnersRef.current.style = 'filter: url(#blur)';
+               aboutRef.current.style = 'filter: blur(2px)';
+               servicesRef.current.style = 'filter: blur(2px)';
+               partnersRef.current.style = 'filter: blur(2px)';
                contactRef.current.style = 'filter: blur(0px)';
             }
       },[activePage]);
