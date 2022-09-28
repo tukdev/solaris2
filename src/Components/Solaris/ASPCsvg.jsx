@@ -63,10 +63,10 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
         <svg width="100%" height="100%" viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid meet">
             <defs>
                 <filter id="noblur">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="0,0"></feGaussianBlur>
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="0"></feGaussianBlur>
                 </filter>
                 <filter id="blur2">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="2,2"></feGaussianBlur>
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur>
                 </filter>                
             </defs>
             <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.4}`} />
