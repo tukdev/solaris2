@@ -27,34 +27,34 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
 
       useEffect(()=>{
             if(activePage === ''){
-               aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: blur(0px)';
+               aboutRef.current.style = 'filter: url(#noblur)';
+               servicesRef.current.style = 'filter: url(#noblur)';
+               partnersRef.current.style = 'filter: url(#noblur)';
+               contactRef.current.style = 'filter: url(#noblur)';
             }
             if(activePage === '1'){
-               aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: url(#blur)';
-               partnersRef.current.style = 'filter: url(#blur)';
-               contactRef.current.style = 'filter: url(#blur)';
+               aboutRef.current.style = 'filter: url(#noblur)';
+               servicesRef.current.style = 'filter: url(#blur2)';
+               partnersRef.current.style = 'filter: url(#blur2)';
+               contactRef.current.style = 'filter: url(#blur2)';
             }
             if(activePage === '2'){
-               aboutRef.current.style = 'filter: url(#blur);';
-               servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: url(#blur)';
-               contactRef.current.style = 'filter: url(#blur)';
+               aboutRef.current.style = 'filter: url(#blur2);';
+               servicesRef.current.style = 'filter: url(#noblur)';
+               partnersRef.current.style = 'filter: url(#blur2)';
+               contactRef.current.style = 'filter: url(#blur2)';
             }
             if(activePage === '3'){
-               aboutRef.current.style = 'filter: url(#blur)';
-               servicesRef.current.style = 'filter: url(#blur)';
-               partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: url(#blur)';
+               aboutRef.current.style = 'filter: url(#blur2)';
+               servicesRef.current.style = 'filter: url(#blur2)';
+               partnersRef.current.style = 'filter: url(#noblur)';
+               contactRef.current.style = 'filter: url(#blur2)';
             }   
             if(activePage === '4'){
-               aboutRef.current.style = 'filter: url(#blur)';
-               servicesRef.current.style = 'filter: url(#blur)';
-               partnersRef.current.style = 'filter: url(#blur)';
-               contactRef.current.style = 'filter: blur(0px)';
+               aboutRef.current.style = 'filter: url(#blur2)';
+               servicesRef.current.style = 'filter: url(#blur2)';
+               partnersRef.current.style = 'filter: url(#blur2)';
+               contactRef.current.style = 'filter: url(#noblur)';
             }
       },[activePage]);
 
@@ -62,21 +62,22 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
    return (
         <svg width="100%" height="100%" viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid meet">
             <defs>
-                <filter id="blur">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="2,2"></feGaussianBlur>
+                <filter id="noblur">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="0,0"></feGaussianBlur>
                 </filter>
+                <filter id="blur2">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2,2"></feGaussianBlur>
+                </filter>                
             </defs>
             <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.4}`} />
             <circle 
                     onMouseEnter={()=>handleAboutSlowDown()}
                     onMouseLeave={()=>handleAboutSpeedUp()} id="aboutCircle" cx="87.4" cy="228.9" r="70"/>
-            <foreignObject width="100px" height="30px"
-                  onClick={(e)=>handleAboutMouseClick(e)}
+            <text onClick={(e)=>handleAboutMouseClick(e)}
                   onMouseEnter={()=>handleAboutMouseEnter()}
                   onMouseLeave={()=>handleAboutMouseLeave()} 
                   id="aboutText"
-                  ref={aboutRef}><span>{activePage === '1' ? 'About' : 'A'}</span> </foreignObject>   
-         
+                  ref={aboutRef}>{activePage === '1' ? 'About' : 'A'}</text>         
 
             <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.65}`} ry={`${viewBox.height/2.75}`}/>
             <circle  onMouseEnter={()=>handleServicesSlowDown()}
@@ -85,9 +86,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                   onMouseEnter={()=>handleServicesMouseEnter()} 
                   onMouseLeave={()=>handleServicesMouseLeave()} 
                   id="servicesText"
-                  ref={servicesRef}>{activePage === '2' ? 'Services' : 'S'}</text> 
-                    
-
+                  ref={servicesRef}>{activePage === '2' ? 'Services' : 'S'}</text>
 
             <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.10}`} ry={`${viewBox.height/2.14}`} />
             <circle onMouseEnter={()=>handlePartnersSlowDown()}
@@ -97,7 +96,6 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                   onMouseLeave={()=>handlePartnersMouseLeave()} 
                   id="partnersText"
                   ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P'}</text>
-
 
             <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.4}`} ry={`${viewBox.height/3}`}  />
             <circle onMouseEnter={()=>handleContactSlowDown()}
