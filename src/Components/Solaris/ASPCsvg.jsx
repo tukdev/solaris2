@@ -34,26 +34,26 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
             }
             if(activePage === '1'){
                aboutRef.current.style = 'filter: blur(0px)';
-               servicesRef.current.style = 'filter: blur(2px)';
-               partnersRef.current.style = 'filter: blur(2px)';
-               contactRef.current.style = 'filter: blur(2px)';
+               servicesRef.current.style = 'filter: url(#blur)';
+               partnersRef.current.style = 'filter: url(#blur)';
+               contactRef.current.style = 'filter: url(#blur)';
             }
             if(activePage === '2'){
-               aboutRef.current.style = 'filter: blur(2px);';
+               aboutRef.current.style = 'filter: url(#blur);';
                servicesRef.current.style = 'filter: blur(0px)';
-               partnersRef.current.style = 'filter: blur(2px)';
-               contactRef.current.style = 'filter: blur(2px)';
+               partnersRef.current.style = 'filter: url(#blur)';
+               contactRef.current.style = 'filter: url(#blur)';
             }
             if(activePage === '3'){
-               aboutRef.current.style = 'filter: blur(2px)';
-               servicesRef.current.style = 'filter: blur(2px)';
+               aboutRef.current.style = 'filter: url(#blur)';
+               servicesRef.current.style = 'filter: url(#blur)';
                partnersRef.current.style = 'filter: blur(0px)';
-               contactRef.current.style = 'filter: blur(2px)';
+               contactRef.current.style = 'filter: url(#blur)';
             }   
             if(activePage === '4'){
-               aboutRef.current.style = 'filter: blur(2px)';
-               servicesRef.current.style = 'filter: blur(2px)';
-               partnersRef.current.style = 'filter: blur(2px)';
+               aboutRef.current.style = 'filter: url(#blur)';
+               servicesRef.current.style = 'filter: url(#blur)';
+               partnersRef.current.style = 'filter: url(#blur)';
                contactRef.current.style = 'filter: blur(0px)';
             }
       },[activePage]);
@@ -61,9 +61,11 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
       
    return (
         <svg width="100%" height="100%" viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid meet">
-            <filter id="blur">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="2,2"></feGaussianBlur>
-            </filter>
+            <defs>
+                <filter id="blur">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2,2"></feGaussianBlur>
+                </filter>
+            </defs>
             <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.4}`} />
             <circle 
                     onMouseEnter={()=>handleAboutSlowDown()}
