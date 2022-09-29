@@ -8,11 +8,11 @@ function Footer({windowWidth,windowHeight,setNodeHover,color,activePage}) {
 
   const footerRef=useRef();
 
-  const [footerSpeed,setFooterSpeed] = useState(100);  
+  const [footerSpeed,setFooterSpeed] = useState(50);  
 
   useEffect(()=>{
-    if(windowWidth < windowHeight){
-      setFooterSpeed(50);
+    if(windowWidth > windowHeight){
+      setFooterSpeed(100);
     }    
   },[]);
 
