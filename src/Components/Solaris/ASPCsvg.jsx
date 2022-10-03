@@ -58,7 +58,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
            contactRef.current.style = 'filter: blur(0px)';
         }*/
         // SVG filter
-        if(activePage === ''){
+/*        if(activePage === ''){
            aboutRef.current.style = 'filter: url(#noblur)';
            servicesRef.current.style = 'filter: url(#noblur)';
            partnersRef.current.style = 'filter: url(#noblur)';
@@ -87,9 +87,9 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
            servicesRef.current.style = 'filter: url(#blur2)';
            partnersRef.current.style = 'filter: url(#blur2)';
            contactRef.current.style = 'filter: url(#noblur)';
-        }
+        }*/
         // CSS text-shadow
-/*      if(activePage === ''){
+      if(activePage === ''){
            aboutRef.current.style = 'opacity:1';
            servicesRef.current.style = 'opacity:1';
            partnersRef.current.style = 'opacity:1';
@@ -118,7 +118,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
            servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
            partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
            contactRef.current.style = 'opacity:1';
-        }*/
+        }
       },[activePage]);
 
       
