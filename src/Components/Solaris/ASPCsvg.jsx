@@ -20,42 +20,105 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                   viewBox}) {
    
 
-      const aboutRef = useRef();
-      const servicesRef = useRef();
-      const partnersRef = useRef();
-      const contactRef = useRef();
+    const aboutRef = useRef();
+    const servicesRef = useRef();
+    const partnersRef = useRef();
+    const contactRef = useRef();
 
-      useEffect(()=>{
-            if(activePage === ''){
-               aboutRef.current.style = 'opacity:1';
-               servicesRef.current.style = 'opacity:1';
-               partnersRef.current.style = 'opacity:1';
-               contactRef.current.style = 'opacity:1';
-            }
-            if(activePage === '1'){
-               aboutRef.current.style = 'opacity:1';
-               servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-            }
-            if(activePage === '2'){
-               aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               servicesRef.current.style = 'opacity:1';
-               partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-            }
-            if(activePage === '3'){
-               aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               partnersRef.current.style = 'opacity:1';
-               contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-            }   
-            if(activePage === '4'){
-               aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
-               contactRef.current.style = 'opacity:1';
-            }
+    useEffect(()=>{
+        // CSS filter
+        if(activePage === ''){
+           aboutRef.current.style = 'filter: blur(0px)';
+           servicesRef.current.style = 'filter: blur(0px)';
+           partnersRef.current.style = 'filter: blur(0px)';
+           contactRef.current.style = 'filter: blur(0px)';
+        }
+        if(activePage === '1'){
+           aboutRef.current.style = 'filter: blur(0px)';
+           servicesRef.current.style = 'filter: blur(8px)';
+           partnersRef.current.style = 'filter: blur(8px)';
+           contactRef.current.style = 'filter: blur(8px)';
+        }
+        if(activePage === '2'){
+           aboutRef.current.style = 'filter: blur(8px);';
+           servicesRef.current.style = 'filter: blur(0px)';
+           partnersRef.current.style = 'filter: blur(8px)';
+           contactRef.current.style = 'filter: blur(8px)';
+        }
+        if(activePage === '3'){
+           aboutRef.current.style = 'filter: blur(8px)';
+           servicesRef.current.style = 'filter: blur(8px)';
+           partnersRef.current.style = 'filter: blur(0px)';
+           contactRef.current.style = 'filter: blur(8px)';
+        }   
+        if(activePage === '4'){
+           aboutRef.current.style = 'filter: blur(8px)';
+           servicesRef.current.style = 'filter: blur(8px)';
+           partnersRef.current.style = 'filter: blur(8px)';
+           contactRef.current.style = 'filter: blur(0px)';
+        }
+        // SVG filter
+/*        if(activePage === ''){
+           aboutRef.current.style = 'filter: url(#noblur)';
+           servicesRef.current.style = 'filter: url(#noblur)';
+           partnersRef.current.style = 'filter: url(#noblur)';
+           contactRef.current.style = 'filter: url(#noblur)';
+        }
+        if(activePage === '1'){
+           aboutRef.current.style = 'filter: url(#noblur)';
+           servicesRef.current.style = 'filter: url(#blur2)';
+           partnersRef.current.style = 'filter: url(#blur2)';
+           contactRef.current.style = 'filter: url(#blur2)';
+        }
+        if(activePage === '2'){
+           aboutRef.current.style = 'filter: url(#blur2);';
+           servicesRef.current.style = 'filter: url(#noblur)';
+           partnersRef.current.style = 'filter: url(#blur2)';
+           contactRef.current.style = 'filter: url(#blur2)';
+        }
+        if(activePage === '3'){
+           aboutRef.current.style = 'filter: url(#blur2)';
+           servicesRef.current.style = 'filter: url(#blur2)';
+           partnersRef.current.style = 'filter: url(#noblur)';
+           contactRef.current.style = 'filter: url(#blur2)';
+        }   
+        if(activePage === '4'){
+           aboutRef.current.style = 'filter: url(#blur2)';
+           servicesRef.current.style = 'filter: url(#blur2)';
+           partnersRef.current.style = 'filter: url(#blur2)';
+           contactRef.current.style = 'filter: url(#noblur)';
+        }*/
+        // CSS text-shadow
+/*      if(activePage === ''){
+           aboutRef.current.style = 'opacity:1';
+           servicesRef.current.style = 'opacity:1';
+           partnersRef.current.style = 'opacity:1';
+           contactRef.current.style = 'opacity:1';
+        }
+        if(activePage === '1'){
+           aboutRef.current.style = 'opacity:1';
+           servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+        }
+        if(activePage === '2'){
+           aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           servicesRef.current.style = 'opacity:1';
+           partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+        }
+        if(activePage === '3'){
+           aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           partnersRef.current.style = 'opacity:1';
+           contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+        }   
+        if(activePage === '4'){
+           aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
+           contactRef.current.style = 'opacity:1';
+        }*/
       },[activePage]);
 
       
@@ -70,8 +133,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 </filter>                
             </defs>
             <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.4}`} />
-            <circle 
-                    onMouseEnter={()=>handleAboutSlowDown()}
+            <circle onMouseEnter={()=>handleAboutSlowDown()}
                     onMouseLeave={()=>handleAboutSpeedUp()} id="aboutCircle" cx="87.4" cy="228.9" r="70"/>
             <text onClick={(e)=>handleAboutMouseClick(e)}
                   onMouseEnter={()=>handleAboutMouseEnter()}
@@ -80,7 +142,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                   ref={aboutRef}>{activePage === '1' ? 'About' : 'A'}</text>         
 
             <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/3.65}`} ry={`${viewBox.height/2.75}`}/>
-            <circle  onMouseEnter={()=>handleServicesSlowDown()}
+            <circle onMouseEnter={()=>handleServicesSlowDown()}
                     onMouseLeave={()=>handleServicesSpeedUp()} id="servicesCircle" cx="81.4" cy="228.9" r="70" fill="lightblue"/>      
             <text onClick={(e)=>handleServicesMouseClick(e)}
                   onMouseEnter={()=>handleServicesMouseEnter()} 
@@ -104,8 +166,7 @@ function ASPCsvg({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                   onMouseEnter={()=>handleContactMouseEnter()} 
                   onMouseLeave={()=>handleContactMouseLeave()} 
                   id="contactText"
-                  ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text> 
-
+                  ref={contactRef}>{activePage === '4' ? 'Contact' : 'C'}</text>
         </svg>        
        
   )
