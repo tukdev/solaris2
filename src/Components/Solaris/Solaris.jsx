@@ -22,13 +22,7 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
     const logoRef = useRef();
 
     function fadeNode(node){
-        gsap.fromTo(node,{
-            opacity: 0
-        },{
-            duration: 1,
-            opacity: 1,
-            ease: 'linear'
-        })
+        //gsap.fromTo(node,{opacity: 0},{duration: 1,opacity: 1,ease: 'linear'})
     };
     
 
