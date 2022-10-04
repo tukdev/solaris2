@@ -17,6 +17,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
       const partnersRef = useRef();
       const contactRef = useRef();
 
+      /*
       useEffect(()=>{
             if(activePage === ''){
                aboutRef.current.style = 'opacity:1';
@@ -36,6 +37,8 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                partnersRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
                contactRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
             }
+            
+            
             if(activePage === '3'){
                aboutRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
                servicesRef.current.style = 'opacity:0.2;text-shadow: 0 0 11px #000;';
@@ -50,15 +53,33 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
             }
       },[activePage]);
 
+      useEffect(()=>{
+         aboutRef.current.filter=`${activePage === '1' || activePage==='' ? 'url(#noblur)' : 'url(#blur2)'}`
+      },[activePage]);
+      */
 
    return (
         <svg width="100%" height="100%" viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-
+            <defs>
+                <filter id="aboutTextFilter" width="20px" height="20px" x="-50%" y="-50%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation={activePage==='1' || activePage==='' ? "0" : "5"}></feGaussianBlur>
+                </filter>   
+                <filter id="servicesTextFilter"  width="20px" height="20px" x="-50%" y="-50%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation={activePage==='2' || activePage==='' ? "0" : "5"}></feGaussianBlur>
+                </filter>  
+                <filter id="partnersTextFilter"  width="20px" height="20px" x="-50%" y="-50%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation={activePage==='3' || activePage==='' ? "0" : "5"}></feGaussianBlur>
+                </filter> 
+                <filter id="contactTextFilter"  width="20px" height="20px" x="-50%" y="-50%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation={activePage==='4' || activePage==='' ? "0" : "5"}></feGaussianBlur>
+                </filter>                 
+            </defs>
                 <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.79}`} ry={`${viewBox.height/3.2}`}  />
                 <circle onClick={(e)=>handleAboutMouseClick(e)} id="aboutCircle" cx="87.4" cy="228.9" r="30" fill="lighbtlue" />
                 <text  
                       onClick={(e)=>handleAboutMouseClick(e)}
                       id="aboutText"
+                      filter='url(#aboutTextFilter)'
                       ref={aboutRef}>{activePage === '1' ? 'About' : 'A\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
                       </text>      
 
@@ -68,6 +89,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handleServicesMouseClick(e)} 
                       id="servicesText"
+                      filter='url(#servicesTextFilter)'
                       ref={servicesRef}>{activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
 
 
@@ -76,6 +98,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handlePartnersMouseClick(e)} 
                       id="partnersText"
+                      filter='url(#partnersTextFilter)'
                       ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
 
 
@@ -84,6 +107,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                 <text 
                       onClick={(e)=>handleContactMouseClick(e)} 
                       id="contactText"
+                      filter='url(#contactTextFilter)'
                       ref={contactRef}>{activePage === '4' ? 'Contact' : 'C\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text> 
 
         </svg>        

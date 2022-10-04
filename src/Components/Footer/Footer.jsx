@@ -8,60 +8,56 @@ function Footer({windowWidth,windowHeight,setNodeHover,color,activePage}) {
 
   const footerRef=useRef();
 
-  const [footerSpeed,setFooterSpeed] = useState(50);  
+  const [footerSpeed,setFooterSpeed] = useState(0.05);  
+  let tickerPos=0;
 
   useEffect(()=>{
-    if(windowWidth > windowHeight){
-      setFooterSpeed(100);
-    }    
+    const intervalId = setInterval(() => {   
+      tickerPos-=footerSpeed;
+      footerRef.current.style.left=tickerPos+"%";
+      tickerPos=tickerPos<-100?0:tickerPos;
+      console.log(tickerPos)
+    }, 10)
+    return () => clearInterval(intervalId)
   },[]);
 
 
   return (
     <div className='Footer-container'>
-        <div ref={footerRef} className="footer-content" onMouseEnter={()=>setNodeHover(true)} onMouseLeave={()=>setNodeHover(false)}>
+        <div ref={footerRef} className="footer-content" style= {{color: color}} >
+          <p>
+            Welcome to The Solariverse – the centre for all things Solaris
+          </p>
+           
+          <p>
+            <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+              Submit a request.
+            </a>
+          </p>
 
-          <Marquee className="footerMarquee" 
-                   style= {{color: color}} 
-                   gradient={false} 
-                   speed={footerSpeed}                    
-                   pauseOnHover={true}
-                   > 
-            <p>
-              Welcome to The Solariverse – the centre for all things Solaris
-            </p>
-             
-            <p>
-              <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
-                Submit a request.
-              </a>
-            </p>
+          <p>
+            Talk to us:
+            <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
+              hello@solaris.agency
+            </a>
+          </p> 
+  
+          <p>
+            Welcome to The Solariverse – the centre for all things Solaris
+          </p>
+           
+          <p>
+            <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+              Submit a request.
+            </a>
+          </p>
 
-            <p>
-              Talk to us:
-              <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
-                hello@solaris.agency
-              </a>
-            </p> 
-    
-            <p>
-              Welcome to The Solariverse – the centre for all things Solaris
-            </p>
-             
-            <p>
-              <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
-                Submit a request.
-              </a>
-            </p>
-
-            <p>
-              Talk to us:
-              <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
-                hello@solaris.agency
-              </a>
-            </p> 
-          </Marquee>
-      
+          <p>
+            Talk to us:
+            <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
+              hello@solaris.agency
+            </a>
+          </p>       
         </div>
     </div>
   )
