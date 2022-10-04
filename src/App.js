@@ -114,7 +114,7 @@ function App() {
         </div>
 
         <div className='app-footer-section'>
-          <Footer windowWidth={windowWidth} windowHeight={windowHeight} color={color} activePage={activePage}/>
+          <Footer windowWidth={windowWidth} windowHeight={windowHeight} color={color}/>
         </div>       
       </div>
   );

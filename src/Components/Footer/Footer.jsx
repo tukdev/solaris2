@@ -4,26 +4,40 @@ import './Footer.css';
 import Marquee from 'react-fast-marquee';
 
 
-function Footer({windowWidth,windowHeight,setNodeHover,color,activePage}) {
+function Footer({windowWidth,windowHeight,color}) {
 
   const footerRef=useRef();
 
-  const [footerSpeed, setFooterSpeed] = useState(1);
+  const [intervalID, setIntervalID] = useState(0);
+  const [position, setPosition] = useState(0);
   let tickerPos=0;
 
   useEffect(()=>{ 
-    const intervalId = setInterval(() => {
-      console.log(footerRef.current.offsetWidth)
-      tickerPos+=footerSpeed;
+    let myIntervalID = setInterval(() => {
+      tickerPos+=1;
       footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
-      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;      
+      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;   
+      setPosition(tickerPos);
     }, 10)
-    return () => clearInterval(intervalId)
+    setIntervalID(myIntervalID);
+    return () => clearInterval(myIntervalID)
   },[]);
-
-
+  const pauseTicker = ()=> {
+    clearInterval(intervalID);
+  }
+  const resumeTicker = ()=> {
+    tickerPos=position;
+    let myIntervalID = setInterval(() => {      
+      tickerPos+=1;
+      footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
+      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;  
+      setPosition(tickerPos);  
+    }, 10)
+    setIntervalID(myIntervalID);
+    return () => clearInterval(myIntervalID)
+  }
   return (
-    <div className='Footer-container'>
+    <div className='Footer-container' onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
         <div ref={footerRef} className="footer-content" style= {{color: color}} >
           <p>
             Welcome to The Solariverse – the centre for all things Solaris
