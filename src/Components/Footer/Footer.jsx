@@ -12,10 +12,11 @@ function Footer({windowWidth,windowHeight,setNodeHover,color,activePage}) {
   let tickerPos=0;
 
   useEffect(()=>{ 
-    const intervalId = setInterval(() => {         
+    const intervalId = setInterval(() => {
+      console.log(footerRef.current.offsetWidth)
       tickerPos+=footerSpeed;
       footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
-      tickerPos=tickerPos>windowWidth?0:tickerPos;      
+      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;      
     }, 10)
     return () => clearInterval(intervalId)
   },[]);
