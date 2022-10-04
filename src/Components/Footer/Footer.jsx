@@ -8,14 +8,14 @@ function Footer({windowWidth,windowHeight,setNodeHover,color,activePage}) {
 
   const footerRef=useRef();
 
-  let footerSpeed=windowWidth>windowHeight?0.05:0.1;  
+  const [footerSpeed, setFooterSpeed] = useState(1);
   let tickerPos=0;
 
-  useEffect(()=>{    
+  useEffect(()=>{ 
     const intervalId = setInterval(() => {         
-      tickerPos-=footerSpeed;
-      footerRef.current.style.left=tickerPos+"%";
-      tickerPos=tickerPos<-100?0:tickerPos;      
+      tickerPos+=footerSpeed;
+      footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
+      tickerPos=tickerPos>windowWidth?0:tickerPos;      
     }, 10)
     return () => clearInterval(intervalId)
   },[]);
