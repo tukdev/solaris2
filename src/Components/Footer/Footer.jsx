@@ -28,8 +28,8 @@ function Footer({windowWidth,windowHeight,color}) {
   }
   return (
     <div className='Footer-container'>
-      <div className="footer-content" style= {{color: color}}>
-        <p onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>resumeTicker()}>
+      <div className="footer-content" style= {{color: color}} onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>resumeTicker()}>
+        <p>
           Welcome to The Solariverse – the centre for all things Solaris
         </p>
          
@@ -46,7 +46,7 @@ function Footer({windowWidth,windowHeight,color}) {
           </a>
         </p> 
 
-        <p onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>resumeTicker()}>
+        <p>
           Welcome to The Solariverse – the centre for all things Solaris
         </p>
          
