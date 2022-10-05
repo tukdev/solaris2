@@ -1,91 +1,68 @@
-import React, { useEffect,useState,useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import {gsap} from 'gsap';
 import './Footer.css';
-
-import Marquee from 'react-fast-marquee';
 
 
 function Footer({windowWidth,windowHeight,color}) {
 
-  const footerRef=useRef();
-
-  const [intervalID, setIntervalID] = useState(0);
-  const [position, setPosition] = useState(0);
-  let tickerPos=0;
+  const tickerRef = useRef(gsap.timeline());
 
   useEffect(()=>{ 
-    let myIntervalID = setInterval(() => {
-      tickerPos+=1;
-      footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
-      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;   
-      setPosition(tickerPos);
-    }, 10)
-    setIntervalID(myIntervalID);
-    return () => clearInterval(myIntervalID)
-  },[]);
-  const pauseTicker = ()=> {
-    clearInterval(intervalID);    
+    let mp = document.querySelector(".footer-content");
+    tickerRef.current.to(mp,{
+      duration:10,
+      repeat:-1,
+      x:'-50%',
+      ease:'linear'
+    }) 
+  }, []);
+
+  function pauseTicker(){
+    tickerRef.current.timeScale(0);     
   }
-  const slowdownTicker = ()=> {
-    clearInterval(intervalID);
-    tickerPos=position;
-    let myIntervalID = setInterval(() => {      
-      tickerPos+=0.3;
-      footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
-      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;  
-      setPosition(tickerPos);  
-    }, 10)
-    setIntervalID(myIntervalID);
-    return () => clearInterval(myIntervalID)
+  function slowdownTicker(){
+    tickerRef.current.timeScale(0.2);     
   }
-  const resumeTicker = ()=> {
-    clearInterval(intervalID);
-    tickerPos=position;
-    let myIntervalID = setInterval(() => {      
-      tickerPos+=1;
-      footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
-      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;  
-      setPosition(tickerPos);  
-    }, 10)
-    setIntervalID(myIntervalID);
-    return () => clearInterval(myIntervalID)
+  function resumeTicker(){
+    tickerRef.current.timeScale(1);      
   }
   return (
-    <div className='Footer-container' onMouseEnter={slowdownTicker} onMouseLeave={resumeTicker}>
-        <div ref={footerRef} className="footer-content" style= {{color: color}} >
-          <p>
-            Welcome to The Solariverse – the centre for all things Solaris
-          </p>
-           
-          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
-            <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
-              Submit a request.
-            </a>
-          </p>
+    <div className='Footer-container'>
+      <div className="footer-content" style= {{color: color}}>
+        <p onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>resumeTicker()}>
+          Welcome to The Solariverse – the centre for all things Solaris
+        </p>
+         
+        <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
+          <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+            Submit a request.
+          </a>
+        </p>
 
-          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
-            Talk to us:
-            <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
-              hello@solaris.agency
-            </a>
-          </p> 
-  
-          <p>
-            Welcome to The Solariverse – the centre for all things Solaris
-          </p>
-           
-          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
-            <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
-              Submit a request.
-            </a>
-          </p>
+        <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
+          Talk to us:
+          <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
+            hello@solaris.agency
+          </a>
+        </p> 
 
-          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
-            Talk to us:
-            <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
-              hello@solaris.agency
-            </a>
-          </p>       
-        </div>
+        <p onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>resumeTicker()}>
+          Welcome to The Solariverse – the centre for all things Solaris
+        </p>
+         
+        <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
+          <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+            Submit a request.
+          </a>
+        </p>
+
+        <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
+          Talk to us:
+          <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
+            hello@solaris.agency
+          </a>
+        </p>       
+      </div>
     </div>
   )
 }
