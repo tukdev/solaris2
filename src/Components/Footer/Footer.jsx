@@ -10,7 +10,7 @@ function Footer({windowWidth,windowHeight,color}) {
   useEffect(()=>{ 
     let mp = document.querySelector(".footer-content");
     tickerRef.current.to(mp,{
-      duration:10,
+      duration:15,
       repeat:-1,
       x:'-50%',
       ease:'linear'
@@ -21,7 +21,7 @@ function Footer({windowWidth,windowHeight,color}) {
     tickerRef.current.timeScale(0);     
   }
   function slowdownTicker(){
-    tickerRef.current.timeScale(0.2);     
+    tickerRef.current.timeScale(0.5);     
   }
   function resumeTicker(){
     tickerRef.current.timeScale(1);      
