@@ -23,9 +23,22 @@ function Footer({windowWidth,windowHeight,color}) {
     return () => clearInterval(myIntervalID)
   },[]);
   const pauseTicker = ()=> {
+    clearInterval(intervalID);    
+  }
+  const slowdownTicker = ()=> {
     clearInterval(intervalID);
+    tickerPos=position;
+    let myIntervalID = setInterval(() => {      
+      tickerPos+=0.3;
+      footerRef.current.style.transform="translateX(-"+tickerPos+"px)";
+      tickerPos=tickerPos>footerRef.current.offsetWidth/2?0:tickerPos;  
+      setPosition(tickerPos);  
+    }, 10)
+    setIntervalID(myIntervalID);
+    return () => clearInterval(myIntervalID)
   }
   const resumeTicker = ()=> {
+    clearInterval(intervalID);
     tickerPos=position;
     let myIntervalID = setInterval(() => {      
       tickerPos+=1;
@@ -37,19 +50,19 @@ function Footer({windowWidth,windowHeight,color}) {
     return () => clearInterval(myIntervalID)
   }
   return (
-    <div className='Footer-container' onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
+    <div className='Footer-container' onMouseEnter={slowdownTicker} onMouseLeave={resumeTicker}>
         <div ref={footerRef} className="footer-content" style= {{color: color}} >
           <p>
             Welcome to The Solariverse – the centre for all things Solaris
           </p>
            
-          <p>
+          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
             <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
               Submit a request.
             </a>
           </p>
 
-          <p>
+          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
             Talk to us:
             <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
               hello@solaris.agency
@@ -60,13 +73,13 @@ function Footer({windowWidth,windowHeight,color}) {
             Welcome to The Solariverse – the centre for all things Solaris
           </p>
            
-          <p>
+          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
             <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
               Submit a request.
             </a>
           </p>
 
-          <p>
+          <p onMouseEnter={pauseTicker} onMouseLeave={resumeTicker}>
             Talk to us:
             <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
               hello@solaris.agency
