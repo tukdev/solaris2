@@ -18,17 +18,20 @@ function Footer({windowWidth,windowHeight,color}) {
   }, []);
 
   function pauseTicker(){
-    tickerRef.current.timeScale(0);     
+    tickerRef.current.pause();     
+  }
+  function resumeTicker(){
+    tickerRef.current.play();     
   }
   function slowdownTicker(){
     tickerRef.current.timeScale(0.5);     
   }
-  function resumeTicker(){
+  function speedupTicker(){
     tickerRef.current.timeScale(1);      
   }
   return (
     <div className='Footer-container'>
-      <div className="footer-content" style= {{color: color}} onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>resumeTicker()}>
+      <div className="footer-content" style= {{color: color}} onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>speedupTicker()}>
         <p>
           Welcome to The Solariverse – the centre for all things Solaris
         </p>
@@ -39,9 +42,10 @@ function Footer({windowWidth,windowHeight,color}) {
           </a>
         </p>
 
-        <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
+        <p>
           Talk to us:
-          <a style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
+          <a onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}
+            style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
             hello@solaris.agency
           </a>
         </p> 
@@ -56,9 +60,10 @@ function Footer({windowWidth,windowHeight,color}) {
           </a>
         </p>
 
-        <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
+        <p>
           Talk to us:
-          <a style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
+          <a onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}
+            style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
             hello@solaris.agency
           </a>
         </p>       

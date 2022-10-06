@@ -25,26 +25,26 @@ function Navbar({setNodeHover,color,modalState,activePage, setActivePage, setMod
         <div className='navbar' onMouseEnter={()=>setNodeHover(true)} onMouseLeave={()=>setNodeHover(false)}>
           <div className='navbar-link' onClick={()=>{setActivePage('1');
                                                      setModalState(true)}} 
-                                                     style={{color: setNavColor('1')}}>
+                                                     style={{color: setNavColor('1'), paddingRight:10,paddingLeft:5}}>
             <label > 1 </label>
                    
           </div>
 
           <div className='navbar-link' onClick={()=>{setActivePage('2');
                                                      setModalState(true)}}
-                                                     style={{color: setNavColor('2')}}>
+                                                     style={{color: setNavColor('2'), paddingRight:5}}>
             <label> 2</label>
           </div>
 
           <div className='navbar-link'  onClick={()=>{setActivePage('3');
                                                       setModalState(true)}} 
-                                                      style={{color: setNavColor('3')}}>
+                                                      style={{color: setNavColor('3'), paddingRight:5}}>
             <label> 3</label>
           </div>
 
           <div className='navbar-link'  onClick={()=>{setActivePage('4');
                                                       setModalState(true)}}
-                                                      style={{color: setNavColor('4')}}>
+                                                      style={{color: setNavColor('4'), paddingRight:5}}>
             <label> 4</label>
           </div>
 
