@@ -52,13 +52,13 @@
   display: flex;
   position: relative;
   width: 100vw;
-  height: 93%;
+  height: 92%;
   z-index: 99;
 }
 .app-footer-section{
   display: flex;
   width: 100vw;
-  height: 7%;
+  height: 8%;
   z-index: 999;
 }
 
