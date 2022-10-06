@@ -100,7 +100,6 @@ function Solaris({windowWidth,windowHeight,viewBox,setNodeHover,color,modalState
         setNodeHover(false);
         aboutTextTL.current.play();
         aboutCircleTL.current.play();
-        console.log('mouse leave');
     }
 
     function handleAboutMouseClick(e){
