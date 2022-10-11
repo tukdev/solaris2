@@ -114,7 +114,7 @@ function App() {
         </div>
 
         <div className='app-footer-section'>
-          <Footer windowWidth={windowWidth} windowHeight={windowHeight} color={color}/>
+          <Footer windowWidth={windowWidth} windowHeight={windowHeight} color={color} setNodeHover={setNodeHover}/>
         </div>       
       </div>
   );

@@ -3,25 +3,33 @@ import {gsap} from 'gsap';
 import './Footer.css';
 
 
-function Footer({windowWidth,windowHeight,color}) {
+function Footer({windowWidth,windowHeight,color,setNodeHover}) {
 
   const tickerRef = useRef(gsap.timeline());
+  const testRef = useRef();
+
 
   useEffect(()=>{ 
-    let mp = document.querySelector(".footer-content");
-    tickerRef.current.to(mp,{
-      duration:15,
-      repeat:-1,
+    for (let i = 0; i < 2; i++) {
+      var elements = document.querySelector(".footer-content").cloneNode(true);
+      document.querySelector(".Footer-container").appendChild(elements);
+    }
+    
+    tickerRef.current.to('.footer-content', {
       x:'-50%',
-      ease:'linear'
-    }) 
+      repeat:-1,
+      ease:'linear', 
+      duration: 15,
+      });
   }, []);
 
   function pauseTicker(){
     tickerRef.current.pause();     
+    setNodeHover(true);
   }
   function resumeTicker(){
-    tickerRef.current.play();     
+    tickerRef.current.play();    
+    setNodeHover(false); 
   }
   function slowdownTicker(){
     tickerRef.current.timeScale(0.5);     
@@ -29,15 +37,16 @@ function Footer({windowWidth,windowHeight,color}) {
   function speedupTicker(){
     tickerRef.current.timeScale(1);      
   }
+
   return (
-    <div className='Footer-container'>
-      <div className="footer-content" style= {{color: color}} onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>speedupTicker()}>
+    <div ref={testRef} style={{color: color}} className='Footer-container'>
+      <div className="footer-content" onMouseEnter={()=>slowdownTicker()} onMouseLeave={()=>speedupTicker()}>
         <p>
           Welcome to The Solariverse – the centre for all things Solaris
         </p>
          
         <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
-          <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+          <a style={{all:'unset', textDecoration: 'underline'}} href='https://solarisagency.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
             Submit a request.
           </a>
         </p>
@@ -45,7 +54,7 @@ function Footer({windowWidth,windowHeight,color}) {
         <p>
           Talk to us:
           <a onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}
-            style={{all:'unset',color:color, textDecoration: 'underline'}}href="mailto:hello@solaris.agency">
+            style={{all:'unset', textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
             hello@solaris.agency
           </a>
         </p> 
@@ -55,7 +64,7 @@ function Footer({windowWidth,windowHeight,color}) {
         </p>
          
         <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
-          <a style={{all:'unset',color:color, textDecoration: 'underline'}} href='https://solarisevents.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+          <a style={{all:'unset', textDecoration: 'underline'}} href='https://solarisagency.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
             Submit a request.
           </a>
         </p>
@@ -63,7 +72,7 @@ function Footer({windowWidth,windowHeight,color}) {
         <p>
           Talk to us:
           <a onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}
-            style={{all:'unset',color:color, textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
+            style={{all:'unset', textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
             hello@solaris.agency
           </a>
         </p>       
