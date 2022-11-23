@@ -19,7 +19,11 @@
     font-size: 1.5vw;
     font-weight: 500;    
 }
-
+.footer-content p a{
+    all: unset;
+    text-decoration: underline;
+    -webkit-text-decoration: underline; 
+}
 
 @media screen and (max-width: 2600px){
     .footer-content p{ font-size: 33px; }

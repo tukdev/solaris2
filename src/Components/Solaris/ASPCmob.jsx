@@ -74,7 +74,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                     <feGaussianBlur in="SourceGraphic" stdDeviation={activePage==='4' || activePage==='' ? "0" : "5"}></feGaussianBlur>
                 </filter>                 
             </defs>
-                <ellipse id="aboutPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.79}`} ry={`${viewBox.height/3.2}`}  />
+                <ellipse id="aboutPath" cx={`${viewBox.width/1.8}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.79}`} ry={`${viewBox.height/3.2}`}  />
                 <circle onClick={(e)=>handleAboutMouseClick(e)} id="aboutCircle" cx="87.4" cy="228.9" r="30" fill="lighbtlue" />
                 <text  
                       onClick={(e)=>handleAboutMouseClick(e)}
@@ -84,7 +84,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                       </text>      
 
 
-                <ellipse id="servicesPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.8}`} ry={`${viewBox.height/10.9}`}/>
+                <ellipse id="servicesPath" cx={`${viewBox.width/1.75}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.7}`} ry={`${viewBox.height/10.9}`}/>
                 <circle  onClick={(e)=>handleServicesMouseClick(e)} id="servicesCircle" cx="87.4" cy="228.9" r="30" fill="lightblue"/>      
                 <text 
                       onClick={(e)=>handleServicesMouseClick(e)} 
@@ -93,7 +93,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                       ref={servicesRef}>{activePage === '2' ? 'Services' : 'S\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
 
 
-                <ellipse id="partnersPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`}  rx={`${viewBox.width/2.85}`} ry={`${viewBox.height/4.36}`} />
+                <ellipse id="partnersPath" cx={`${viewBox.width/1.8}`} cy={`${viewBox.height/2}`}  rx={`${viewBox.width/2.85}`} ry={`${viewBox.height/4.36}`} />
                 <circle  onClick={(e)=>handlePartnersMouseClick(e)}  id="partnersCircle" cx="87.4" cy="228.9" r="30" fill="lightblue"/>             
                 <text 
                       onClick={(e)=>handlePartnersMouseClick(e)} 
@@ -102,7 +102,7 @@ function ASPCmob({handleAboutMouseEnter,handleAboutMouseLeave,handleServicesMous
                       ref={partnersRef}>{activePage === '3' ? 'Partners' : 'P\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}</text>
 
 
-                <ellipse id="contactPath" cx={`${viewBox.width/2}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.9}`}  />
+                <ellipse id="contactPath" cx={`${viewBox.width/1.8}`} cy={`${viewBox.height/2}`} rx={`${viewBox.width/2.66}`} ry={`${viewBox.height/2.9}`}  />
                 <circle  onClick={(e)=>handleContactMouseClick(e)} id="contactCircle" cx="87.4" cy="228.9" r="30" fill="lightblue"/>        
                 <text 
                       onClick={(e)=>handleContactMouseClick(e)} 

@@ -46,7 +46,7 @@ function Footer({windowWidth,windowHeight,color,setNodeHover}) {
         </p>
          
         <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
-          <a style={{all:'unset', textDecoration: 'underline'}} href='https://solarisagency.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+          <a href='https://solarisagency.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
             Submit a request.
           </a>
         </p>
@@ -54,7 +54,7 @@ function Footer({windowWidth,windowHeight,color,setNodeHover}) {
         <p>
           Talk to us:
           <a onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}
-            style={{all:'unset', textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
+             href="mailto:hello@solaris.agency">
             hello@solaris.agency
           </a>
         </p> 
@@ -64,7 +64,7 @@ function Footer({windowWidth,windowHeight,color,setNodeHover}) {
         </p>
          
         <p onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}>
-          <a style={{all:'unset', textDecoration: 'underline'}} href='https://solarisagency.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
+          <a href='https://solarisagency.typeform.com/to/NQ5UTUb6?typeform-source=www.google.com'>
             Submit a request.
           </a>
         </p>
@@ -72,7 +72,7 @@ function Footer({windowWidth,windowHeight,color,setNodeHover}) {
         <p>
           Talk to us:
           <a onMouseEnter={()=>pauseTicker()} onMouseLeave={()=>resumeTicker()}
-            style={{all:'unset', textDecoration: 'underline'}} href="mailto:hello@solaris.agency">
+             href="mailto:hello@solaris.agency">
             hello@solaris.agency
           </a>
         </p>       
